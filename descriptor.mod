@@ -1,7 +1,7 @@
 version="1.0"
 tags={
 	"Gameplay"
-	"Utility"
+	"Utilities"
 }
-name="Auto Upgrade"
+name="Auto Upgrade Buildings"
 supported_version="1.14.*"

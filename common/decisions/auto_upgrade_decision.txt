@@ -1,0 +1,24 @@
+# Auto Upgrade Buildings Decision
+auto_upgrade_buildings_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	desc = auto_upgrade_buildings_decision_desc
+	sort_order = 80
+	ai_check_interval = 0
+
+	is_shown = {
+		is_ai = no
+		is_landed = yes
+	}
+
+	is_valid = {
+		gold >= 75
+	}
+
+	cooldown = { days = 1 }
+
+	effect = {
+		auto_upgrade_all_effect = yes
+	}
+}

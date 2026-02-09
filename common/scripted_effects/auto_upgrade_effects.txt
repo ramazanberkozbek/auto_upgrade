@@ -1,0 +1,2652 @@
+# Auto Upgrade Buildings - Scripted Effects
+# Generated from ck3_buildings_database.json
+# Only upgrades EXISTING buildings - no new construction
+# Checks: gold, innovation (technology), holding level
+
+# ========================================
+# MAIN HOLDINGS
+# ========================================
+
+# castle
+auto_upgrade_castle_effect = {
+	if = {
+		limit = {
+			has_building = castle_04
+			root = { gold >= 1000 }
+			root.culture = { has_innovation = innovation_royal_armory }
+		}
+		add_building = castle_05
+		root = { remove_short_term_gold = 1000 }
+	}
+	else_if = {
+		limit = {
+			has_building = castle_03
+			root = { gold >= 850 }
+			root.culture = { has_innovation = innovation_royal_armory }
+		}
+		add_building = castle_04
+		root = { remove_short_term_gold = 850 }
+	}
+	else_if = {
+		limit = {
+			has_building = castle_02
+			root = { gold >= 700 }
+			root.culture = { has_innovation = innovation_castle_baileys }
+		}
+		add_building = castle_03
+		root = { remove_short_term_gold = 700 }
+	}
+	else_if = {
+		limit = {
+			has_building = castle_01
+			root = { gold >= 550 }
+			root.culture = { has_innovation = innovation_battlements }
+		}
+		add_building = castle_02
+		root = { remove_short_term_gold = 550 }
+	}
+}
+
+# city
+auto_upgrade_city_effect = {
+	if = {
+		limit = {
+			has_building = city_04
+			root = { gold >= 1000 }
+			root.culture = { has_innovation = innovation_royal_armory }
+		}
+		add_building = city_05
+		root = { remove_short_term_gold = 1000 }
+	}
+	else_if = {
+		limit = {
+			has_building = city_03
+			root = { gold >= 850 }
+			root.culture = { has_innovation = innovation_royal_armory }
+		}
+		add_building = city_04
+		root = { remove_short_term_gold = 850 }
+	}
+	else_if = {
+		limit = {
+			has_building = city_02
+			root = { gold >= 700 }
+			root.culture = { has_innovation = innovation_castle_baileys }
+		}
+		add_building = city_03
+		root = { remove_short_term_gold = 700 }
+	}
+	else_if = {
+		limit = {
+			has_building = city_01
+			root = { gold >= 550 }
+			root.culture = { has_innovation = innovation_burhs }
+		}
+		add_building = city_02
+		root = { remove_short_term_gold = 550 }
+	}
+}
+
+# temple
+auto_upgrade_temple_effect = {
+	if = {
+		limit = {
+			has_building = temple_04
+			root = { gold >= 1000 }
+			root.culture = { has_innovation = innovation_royal_armory }
+		}
+		add_building = temple_05
+		root = { remove_short_term_gold = 1000 }
+	}
+	else_if = {
+		limit = {
+			has_building = temple_03
+			root = { gold >= 850 }
+			root.culture = { has_innovation = innovation_royal_armory }
+		}
+		add_building = temple_04
+		root = { remove_short_term_gold = 850 }
+	}
+	else_if = {
+		limit = {
+			has_building = temple_02
+			root = { gold >= 700 }
+			root.culture = { has_innovation = innovation_castle_baileys }
+		}
+		add_building = temple_03
+		root = { remove_short_term_gold = 700 }
+	}
+	else_if = {
+		limit = {
+			has_building = temple_01
+			root = { gold >= 550 }
+			root.culture = { has_innovation = innovation_battlements }
+		}
+		add_building = temple_02
+		root = { remove_short_term_gold = 550 }
+	}
+}
+
+# tribe
+auto_upgrade_tribe_effect = {
+	if = {
+		limit = {
+			has_building = tribe_03
+			root = { gold >= 150 }
+		}
+		add_building = tribe_04
+		root = { remove_short_term_gold = 150 }
+	}
+	else_if = {
+		limit = {
+			has_building = tribe_02
+			root = { gold >= 125 }
+		}
+		add_building = tribe_03
+		root = { remove_short_term_gold = 125 }
+	}
+	else_if = {
+		limit = {
+			has_building = tribe_01
+			root = { gold >= 100 }
+		}
+		add_building = tribe_02
+		root = { remove_short_term_gold = 100 }
+	}
+}
+
+# ========================================
+# ECONOMY BUILDINGS
+# ========================================
+
+# Farm Estates
+auto_upgrade_farm_estates_effect = {
+	if = {
+		limit = {
+			has_building = farm_estates_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = farm_estates_08
+		root = { remove_short_term_gold = 2240 }
+	}
+	else_if = {
+		limit = {
+			has_building = farm_estates_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = farm_estates_07
+		root = { remove_short_term_gold = 1600 }
+	}
+	else_if = {
+		limit = {
+			has_building = farm_estates_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = farm_estates_06
+		root = { remove_short_term_gold = 1110 }
+	}
+	else_if = {
+		limit = {
+			has_building = farm_estates_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = farm_estates_05
+		root = { remove_short_term_gold = 750 }
+	}
+	else_if = {
+		limit = {
+			has_building = farm_estates_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = farm_estates_04
+		root = { remove_short_term_gold = 500 }
+	}
+	else_if = {
+		limit = {
+			has_building = farm_estates_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = farm_estates_03
+		root = { remove_short_term_gold = 340 }
+	}
+	else_if = {
+		limit = {
+			has_building = farm_estates_01
+			root = { gold >= 250 }
+			root.culture = { has_innovation = innovation_crop_rotation }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = farm_estates_02
+		root = { remove_short_term_gold = 250 }
+	}
+}
+
+# Cereal Fields
+auto_upgrade_cereal_fields_effect = {
+	if = {
+		limit = {
+			has_building = cereal_fields_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = cereal_fields_08
+		root = { remove_short_term_gold = 2240 }
+	}
+	else_if = {
+		limit = {
+			has_building = cereal_fields_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = cereal_fields_07
+		root = { remove_short_term_gold = 1600 }
+	}
+	else_if = {
+		limit = {
+			has_building = cereal_fields_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = cereal_fields_06
+		root = { remove_short_term_gold = 1110 }
+	}
+	else_if = {
+		limit = {
+			has_building = cereal_fields_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = cereal_fields_05
+		root = { remove_short_term_gold = 750 }
+	}
+	else_if = {
+		limit = {
+			has_building = cereal_fields_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = cereal_fields_04
+		root = { remove_short_term_gold = 500 }
+	}
+	else_if = {
+		limit = {
+			has_building = cereal_fields_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = cereal_fields_03
+		root = { remove_short_term_gold = 340 }
+	}
+	else_if = {
+		limit = {
+			has_building = cereal_fields_01
+			root = { gold >= 250 }
+			root.culture = { has_innovation = innovation_crop_rotation }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = cereal_fields_02
+		root = { remove_short_term_gold = 250 }
+	}
+}
+
+# Orchards
+auto_upgrade_orchards_effect = {
+	if = {
+		limit = {
+			has_building = orchards_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = orchards_08
+		root = { remove_short_term_gold = 2240 }
+	}
+	else_if = {
+		limit = {
+			has_building = orchards_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = orchards_07
+		root = { remove_short_term_gold = 1600 }
+	}
+	else_if = {
+		limit = {
+			has_building = orchards_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = orchards_06
+		root = { remove_short_term_gold = 1110 }
+	}
+	else_if = {
+		limit = {
+			has_building = orchards_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = orchards_05
+		root = { remove_short_term_gold = 750 }
+	}
+	else_if = {
+		limit = {
+			has_building = orchards_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = orchards_04
+		root = { remove_short_term_gold = 500 }
+	}
+	else_if = {
+		limit = {
+			has_building = orchards_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = orchards_03
+		root = { remove_short_term_gold = 340 }
+	}
+	else_if = {
+		limit = {
+			has_building = orchards_01
+			root = { gold >= 250 }
+			root.culture = { has_innovation = innovation_crop_rotation }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = orchards_02
+		root = { remove_short_term_gold = 250 }
+	}
+}
+
+# Cattle Pastures
+auto_upgrade_pastures_effect = {
+	if = {
+		limit = {
+			has_building = pastures_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = pastures_08
+		root = { remove_short_term_gold = 2240 }
+	}
+	else_if = {
+		limit = {
+			has_building = pastures_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = pastures_07
+		root = { remove_short_term_gold = 1600 }
+	}
+	else_if = {
+		limit = {
+			has_building = pastures_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = pastures_06
+		root = { remove_short_term_gold = 1110 }
+	}
+	else_if = {
+		limit = {
+			has_building = pastures_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = pastures_05
+		root = { remove_short_term_gold = 750 }
+	}
+	else_if = {
+		limit = {
+			has_building = pastures_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = pastures_04
+		root = { remove_short_term_gold = 500 }
+	}
+	else_if = {
+		limit = {
+			has_building = pastures_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = pastures_03
+		root = { remove_short_term_gold = 340 }
+	}
+	else_if = {
+		limit = {
+			has_building = pastures_01
+			root = { gold >= 250 }
+			root.culture = { has_innovation = innovation_crop_rotation }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = pastures_02
+		root = { remove_short_term_gold = 250 }
+	}
+}
+
+# Hunting Grounds
+auto_upgrade_hunting_grounds_effect = {
+	if = {
+		limit = {
+			has_building = hunting_grounds_07
+			root = { gold >= 1145 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = hunting_grounds_08
+		root = { remove_short_term_gold = 1145 }
+	}
+	else_if = {
+		limit = {
+			has_building = hunting_grounds_06
+			root = { gold >= 825 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = hunting_grounds_07
+		root = { remove_short_term_gold = 825 }
+	}
+	else_if = {
+		limit = {
+			has_building = hunting_grounds_05
+			root = { gold >= 580 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = hunting_grounds_06
+		root = { remove_short_term_gold = 580 }
+	}
+	else_if = {
+		limit = {
+			has_building = hunting_grounds_04
+			root = { gold >= 400 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = hunting_grounds_05
+		root = { remove_short_term_gold = 400 }
+	}
+	else_if = {
+		limit = {
+			has_building = hunting_grounds_03
+			root = { gold >= 275 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = hunting_grounds_04
+		root = { remove_short_term_gold = 275 }
+	}
+	else_if = {
+		limit = {
+			has_building = hunting_grounds_02
+			root = { gold >= 195 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = hunting_grounds_03
+		root = { remove_short_term_gold = 195 }
+	}
+	else_if = {
+		limit = {
+			has_building = hunting_grounds_01
+			root = { gold >= 150 }
+			root.culture = { has_innovation = innovation_crop_rotation }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = hunting_grounds_02
+		root = { remove_short_term_gold = 150 }
+	}
+}
+
+# Logging Camps
+auto_upgrade_logging_camps_effect = {
+	if = {
+		limit = {
+			has_building = logging_camps_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = logging_camps_08
+		root = { remove_short_term_gold = 2240 }
+	}
+	else_if = {
+		limit = {
+			has_building = logging_camps_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = logging_camps_07
+		root = { remove_short_term_gold = 1600 }
+	}
+	else_if = {
+		limit = {
+			has_building = logging_camps_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = logging_camps_06
+		root = { remove_short_term_gold = 1110 }
+	}
+	else_if = {
+		limit = {
+			has_building = logging_camps_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = logging_camps_05
+		root = { remove_short_term_gold = 750 }
+	}
+	else_if = {
+		limit = {
+			has_building = logging_camps_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = logging_camps_04
+		root = { remove_short_term_gold = 500 }
+	}
+	else_if = {
+		limit = {
+			has_building = logging_camps_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = logging_camps_03
+		root = { remove_short_term_gold = 340 }
+	}
+	else_if = {
+		limit = {
+			has_building = logging_camps_01
+			root = { gold >= 250 }
+			root.culture = { has_innovation = innovation_crop_rotation }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = logging_camps_02
+		root = { remove_short_term_gold = 250 }
+	}
+}
+
+# Peat Quarries
+auto_upgrade_peat_quarries_effect = {
+	if = {
+		limit = {
+			has_building = peat_quarries_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = peat_quarries_08
+		root = { remove_short_term_gold = 2240 }
+	}
+	else_if = {
+		limit = {
+			has_building = peat_quarries_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = peat_quarries_07
+		root = { remove_short_term_gold = 1600 }
+	}
+	else_if = {
+		limit = {
+			has_building = peat_quarries_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = peat_quarries_06
+		root = { remove_short_term_gold = 1110 }
+	}
+	else_if = {
+		limit = {
+			has_building = peat_quarries_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = peat_quarries_05
+		root = { remove_short_term_gold = 750 }
+	}
+	else_if = {
+		limit = {
+			has_building = peat_quarries_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = peat_quarries_04
+		root = { remove_short_term_gold = 500 }
+	}
+	else_if = {
+		limit = {
+			has_building = peat_quarries_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = peat_quarries_03
+		root = { remove_short_term_gold = 340 }
+	}
+	else_if = {
+		limit = {
+			has_building = peat_quarries_01
+			root = { gold >= 250 }
+			root.culture = { has_innovation = innovation_crop_rotation }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = peat_quarries_02
+		root = { remove_short_term_gold = 250 }
+	}
+}
+
+# Hill Farms
+auto_upgrade_hill_farms_effect = {
+	if = {
+		limit = {
+			has_building = hill_farms_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = hill_farms_08
+		root = { remove_short_term_gold = 2240 }
+	}
+	else_if = {
+		limit = {
+			has_building = hill_farms_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = hill_farms_07
+		root = { remove_short_term_gold = 1600 }
+	}
+	else_if = {
+		limit = {
+			has_building = hill_farms_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = hill_farms_06
+		root = { remove_short_term_gold = 1110 }
+	}
+	else_if = {
+		limit = {
+			has_building = hill_farms_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = hill_farms_05
+		root = { remove_short_term_gold = 750 }
+	}
+	else_if = {
+		limit = {
+			has_building = hill_farms_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = hill_farms_04
+		root = { remove_short_term_gold = 500 }
+	}
+	else_if = {
+		limit = {
+			has_building = hill_farms_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = hill_farms_03
+		root = { remove_short_term_gold = 340 }
+	}
+	else_if = {
+		limit = {
+			has_building = hill_farms_01
+			root = { gold >= 250 }
+			root.culture = { has_innovation = innovation_crop_rotation }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = hill_farms_02
+		root = { remove_short_term_gold = 250 }
+	}
+}
+
+# Quarries
+auto_upgrade_quarries_effect = {
+	if = {
+		limit = {
+			has_building = quarries_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = quarries_08
+		root = { remove_short_term_gold = 2240 }
+	}
+	else_if = {
+		limit = {
+			has_building = quarries_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = quarries_07
+		root = { remove_short_term_gold = 1600 }
+	}
+	else_if = {
+		limit = {
+			has_building = quarries_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = quarries_06
+		root = { remove_short_term_gold = 1110 }
+	}
+	else_if = {
+		limit = {
+			has_building = quarries_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = quarries_05
+		root = { remove_short_term_gold = 750 }
+	}
+	else_if = {
+		limit = {
+			has_building = quarries_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = quarries_04
+		root = { remove_short_term_gold = 500 }
+	}
+	else_if = {
+		limit = {
+			has_building = quarries_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = quarries_03
+		root = { remove_short_term_gold = 340 }
+	}
+	else_if = {
+		limit = {
+			has_building = quarries_01
+			root = { gold >= 250 }
+			root.culture = { has_innovation = innovation_crop_rotation }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = quarries_02
+		root = { remove_short_term_gold = 250 }
+	}
+}
+
+# Trade Port
+auto_upgrade_common_tradeport_effect = {
+	if = {
+		limit = {
+			has_building = common_tradeport_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = common_tradeport_08
+		root = { remove_short_term_gold = 2240 }
+	}
+	else_if = {
+		limit = {
+			has_building = common_tradeport_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = common_tradeport_07
+		root = { remove_short_term_gold = 1600 }
+	}
+	else_if = {
+		limit = {
+			has_building = common_tradeport_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = common_tradeport_06
+		root = { remove_short_term_gold = 1110 }
+	}
+	else_if = {
+		limit = {
+			has_building = common_tradeport_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = common_tradeport_05
+		root = { remove_short_term_gold = 750 }
+	}
+	else_if = {
+		limit = {
+			has_building = common_tradeport_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = common_tradeport_04
+		root = { remove_short_term_gold = 500 }
+	}
+	else_if = {
+		limit = {
+			has_building = common_tradeport_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = common_tradeport_03
+		root = { remove_short_term_gold = 340 }
+	}
+	else_if = {
+		limit = {
+			has_building = common_tradeport_01
+			root = { gold >= 250 }
+			root.culture = { has_innovation = innovation_crop_rotation }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = common_tradeport_02
+		root = { remove_short_term_gold = 250 }
+	}
+}
+
+# Caravanserai
+auto_upgrade_caravanserai_effect = {
+	if = {
+		limit = {
+			has_building = caravanserai_07
+			root = { gold >= 3335 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = caravanserai_08
+		root = { remove_short_term_gold = 3335 }
+	}
+	else_if = {
+		limit = {
+			has_building = caravanserai_06
+			root = { gold >= 2375 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = caravanserai_07
+		root = { remove_short_term_gold = 2375 }
+	}
+	else_if = {
+		limit = {
+			has_building = caravanserai_05
+			root = { gold >= 1640 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = caravanserai_06
+		root = { remove_short_term_gold = 1640 }
+	}
+	else_if = {
+		limit = {
+			has_building = caravanserai_04
+			root = { gold >= 1100 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = caravanserai_05
+		root = { remove_short_term_gold = 1100 }
+	}
+	else_if = {
+		limit = {
+			has_building = caravanserai_03
+			root = { gold >= 725 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = caravanserai_04
+		root = { remove_short_term_gold = 725 }
+	}
+	else_if = {
+		limit = {
+			has_building = caravanserai_02
+			root = { gold >= 485 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = caravanserai_03
+		root = { remove_short_term_gold = 485 }
+	}
+	else_if = {
+		limit = {
+			has_building = caravanserai_01
+			root = { gold >= 350 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = caravanserai_02
+		root = { remove_short_term_gold = 350 }
+	}
+}
+
+# Watermills
+auto_upgrade_watermills_effect = {
+	if = {
+		limit = {
+			has_building = watermills_07
+			root = { gold >= 3335 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = watermills_08
+		root = { remove_short_term_gold = 3335 }
+	}
+	else_if = {
+		limit = {
+			has_building = watermills_06
+			root = { gold >= 2375 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = watermills_07
+		root = { remove_short_term_gold = 2375 }
+	}
+	else_if = {
+		limit = {
+			has_building = watermills_05
+			root = { gold >= 1640 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = watermills_06
+		root = { remove_short_term_gold = 1640 }
+	}
+	else_if = {
+		limit = {
+			has_building = watermills_04
+			root = { gold >= 1100 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = watermills_05
+		root = { remove_short_term_gold = 1100 }
+	}
+	else_if = {
+		limit = {
+			has_building = watermills_03
+			root = { gold >= 725 }
+			root.culture = { has_innovation = innovation_windmills }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = watermills_04
+		root = { remove_short_term_gold = 725 }
+	}
+	else_if = {
+		limit = {
+			has_building = watermills_02
+			root = { gold >= 485 }
+			root.culture = { has_innovation = innovation_windmills }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = watermills_03
+		root = { remove_short_term_gold = 485 }
+	}
+	else_if = {
+		limit = {
+			has_building = watermills_01
+			root = { gold >= 350 }
+			root.culture = { has_innovation = innovation_windmills }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = watermills_02
+		root = { remove_short_term_gold = 350 }
+	}
+}
+
+# Windmills
+auto_upgrade_windmills_effect = {
+	if = {
+		limit = {
+			has_building = windmills_07
+			root = { gold >= 3335 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = windmills_08
+		root = { remove_short_term_gold = 3335 }
+	}
+	else_if = {
+		limit = {
+			has_building = windmills_06
+			root = { gold >= 2375 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = windmills_07
+		root = { remove_short_term_gold = 2375 }
+	}
+	else_if = {
+		limit = {
+			has_building = windmills_05
+			root = { gold >= 1640 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = windmills_06
+		root = { remove_short_term_gold = 1640 }
+	}
+	else_if = {
+		limit = {
+			has_building = windmills_04
+			root = { gold >= 1100 }
+			root.culture = { has_innovation = innovation_windmills }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = windmills_05
+		root = { remove_short_term_gold = 1100 }
+	}
+	else_if = {
+		limit = {
+			has_building = windmills_03
+			root = { gold >= 725 }
+			root.culture = { has_innovation = innovation_windmills }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = windmills_04
+		root = { remove_short_term_gold = 725 }
+	}
+	else_if = {
+		limit = {
+			has_building = windmills_02
+			root = { gold >= 485 }
+			root.culture = { has_innovation = innovation_windmills }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = windmills_03
+		root = { remove_short_term_gold = 485 }
+	}
+	else_if = {
+		limit = {
+			has_building = windmills_01
+			root = { gold >= 350 }
+			root.culture = { has_innovation = innovation_windmills }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = windmills_02
+		root = { remove_short_term_gold = 350 }
+	}
+}
+
+# Qanats
+auto_upgrade_qanats_effect = {
+	if = {
+		limit = {
+			has_building = qanats_07
+			root = { gold >= 2240 }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = qanats_08
+		root = { remove_short_term_gold = 2240 }
+	}
+	else_if = {
+		limit = {
+			has_building = qanats_06
+			root = { gold >= 1600 }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = qanats_07
+		root = { remove_short_term_gold = 1600 }
+	}
+	else_if = {
+		limit = {
+			has_building = qanats_05
+			root = { gold >= 1110 }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = qanats_06
+		root = { remove_short_term_gold = 1110 }
+	}
+	else_if = {
+		limit = {
+			has_building = qanats_04
+			root = { gold >= 750 }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = qanats_05
+		root = { remove_short_term_gold = 750 }
+	}
+	else_if = {
+		limit = {
+			has_building = qanats_03
+			root = { gold >= 500 }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = qanats_04
+		root = { remove_short_term_gold = 500 }
+	}
+	else_if = {
+		limit = {
+			has_building = qanats_02
+			root = { gold >= 340 }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = qanats_03
+		root = { remove_short_term_gold = 340 }
+	}
+	else_if = {
+		limit = {
+			has_building = qanats_01
+			root = { gold >= 250 }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = qanats_02
+		root = { remove_short_term_gold = 250 }
+	}
+}
+
+# Paddy Fields (Rice)
+auto_upgrade_paddy_fields_effect = {
+	if = {
+		limit = {
+			has_building = paddy_fields_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = paddy_fields_08
+		root = { remove_short_term_gold = 2240 }
+	}
+	else_if = {
+		limit = {
+			has_building = paddy_fields_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = paddy_fields_07
+		root = { remove_short_term_gold = 1600 }
+	}
+	else_if = {
+		limit = {
+			has_building = paddy_fields_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = paddy_fields_06
+		root = { remove_short_term_gold = 1110 }
+	}
+	else_if = {
+		limit = {
+			has_building = paddy_fields_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = paddy_fields_05
+		root = { remove_short_term_gold = 750 }
+	}
+	else_if = {
+		limit = {
+			has_building = paddy_fields_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = paddy_fields_04
+		root = { remove_short_term_gold = 500 }
+	}
+	else_if = {
+		limit = {
+			has_building = paddy_fields_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = paddy_fields_03
+		root = { remove_short_term_gold = 340 }
+	}
+	else_if = {
+		limit = {
+			has_building = paddy_fields_01
+			root = { gold >= 250 }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = paddy_fields_02
+		root = { remove_short_term_gold = 250 }
+	}
+}
+
+# Elephant Pens
+auto_upgrade_elephant_pens_effect = {
+	if = {
+		limit = {
+			has_building = elephant_pens_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = elephant_pens_08
+		root = { remove_short_term_gold = 2240 }
+	}
+	else_if = {
+		limit = {
+			has_building = elephant_pens_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = elephant_pens_07
+		root = { remove_short_term_gold = 1600 }
+	}
+	else_if = {
+		limit = {
+			has_building = elephant_pens_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = elephant_pens_06
+		root = { remove_short_term_gold = 1110 }
+	}
+	else_if = {
+		limit = {
+			has_building = elephant_pens_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = elephant_pens_05
+		root = { remove_short_term_gold = 750 }
+	}
+	else_if = {
+		limit = {
+			has_building = elephant_pens_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = elephant_pens_04
+		root = { remove_short_term_gold = 500 }
+	}
+	else_if = {
+		limit = {
+			has_building = elephant_pens_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = elephant_pens_03
+		root = { remove_short_term_gold = 340 }
+	}
+	else_if = {
+		limit = {
+			has_building = elephant_pens_01
+			root = { gold >= 250 }
+			root.culture = { has_innovation = innovation_crop_rotation }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = elephant_pens_02
+		root = { remove_short_term_gold = 250 }
+	}
+}
+
+# Plantations
+auto_upgrade_plantations_effect = {
+	if = {
+		limit = {
+			has_building = plantations_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = plantations_08
+		root = { remove_short_term_gold = 2240 }
+	}
+	else_if = {
+		limit = {
+			has_building = plantations_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = plantations_07
+		root = { remove_short_term_gold = 1600 }
+	}
+	else_if = {
+		limit = {
+			has_building = plantations_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = plantations_06
+		root = { remove_short_term_gold = 1110 }
+	}
+	else_if = {
+		limit = {
+			has_building = plantations_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_guilds }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = plantations_05
+		root = { remove_short_term_gold = 750 }
+	}
+	else_if = {
+		limit = {
+			has_building = plantations_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = plantations_04
+		root = { remove_short_term_gold = 500 }
+	}
+	else_if = {
+		limit = {
+			has_building = plantations_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = plantations_03
+		root = { remove_short_term_gold = 340 }
+	}
+	else_if = {
+		limit = {
+			has_building = plantations_01
+			root = { gold >= 250 }
+			root.culture = { has_innovation = innovation_crop_rotation }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = plantations_02
+		root = { remove_short_term_gold = 250 }
+	}
+}
+
+# ========================================
+# MILITARY BUILDINGS
+# ========================================
+
+# Barracks
+auto_upgrade_barracks_effect = {
+	if = {
+		limit = {
+			has_building = barracks_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = barracks_08
+		root = { remove_short_term_gold = 2240 }
+	}
+	else_if = {
+		limit = {
+			has_building = barracks_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = barracks_07
+		root = { remove_short_term_gold = 1600 }
+	}
+	else_if = {
+		limit = {
+			has_building = barracks_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = barracks_06
+		root = { remove_short_term_gold = 1110 }
+	}
+	else_if = {
+		limit = {
+			has_building = barracks_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_castle_baileys }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = barracks_05
+		root = { remove_short_term_gold = 750 }
+	}
+	else_if = {
+		limit = {
+			has_building = barracks_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_burhs }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = barracks_04
+		root = { remove_short_term_gold = 500 }
+	}
+	else_if = {
+		limit = {
+			has_building = barracks_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_burhs }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = barracks_03
+		root = { remove_short_term_gold = 340 }
+	}
+	else_if = {
+		limit = {
+			has_building = barracks_01
+			root = { gold >= 250 }
+			root.culture = { has_innovation = innovation_barracks }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = barracks_02
+		root = { remove_short_term_gold = 250 }
+	}
+}
+
+# Militia Camps
+auto_upgrade_militia_camps_effect = {
+	if = {
+		limit = {
+			has_building = militia_camps_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = militia_camps_08
+		root = { remove_short_term_gold = 2240 }
+	}
+	else_if = {
+		limit = {
+			has_building = militia_camps_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = militia_camps_07
+		root = { remove_short_term_gold = 1600 }
+	}
+	else_if = {
+		limit = {
+			has_building = militia_camps_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = militia_camps_06
+		root = { remove_short_term_gold = 1110 }
+	}
+	else_if = {
+		limit = {
+			has_building = militia_camps_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_castle_baileys }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = militia_camps_05
+		root = { remove_short_term_gold = 750 }
+	}
+	else_if = {
+		limit = {
+			has_building = militia_camps_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_burhs }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = militia_camps_04
+		root = { remove_short_term_gold = 500 }
+	}
+	else_if = {
+		limit = {
+			has_building = militia_camps_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_burhs }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = militia_camps_03
+		root = { remove_short_term_gold = 340 }
+	}
+	else_if = {
+		limit = {
+			has_building = militia_camps_01
+			root = { gold >= 250 }
+			root.culture = { has_innovation = innovation_barracks }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = militia_camps_02
+		root = { remove_short_term_gold = 250 }
+	}
+}
+
+# Stables
+auto_upgrade_stables_effect = {
+	if = {
+		limit = {
+			has_building = stables_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = stables_08
+		root = { remove_short_term_gold = 2240 }
+	}
+	else_if = {
+		limit = {
+			has_building = stables_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = stables_07
+		root = { remove_short_term_gold = 1600 }
+	}
+	else_if = {
+		limit = {
+			has_building = stables_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = stables_06
+		root = { remove_short_term_gold = 1110 }
+	}
+	else_if = {
+		limit = {
+			has_building = stables_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_castle_baileys }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = stables_05
+		root = { remove_short_term_gold = 750 }
+	}
+	else_if = {
+		limit = {
+			has_building = stables_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_burhs }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = stables_04
+		root = { remove_short_term_gold = 500 }
+	}
+	else_if = {
+		limit = {
+			has_building = stables_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_burhs }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = stables_03
+		root = { remove_short_term_gold = 340 }
+	}
+	else_if = {
+		limit = {
+			has_building = stables_01
+			root = { gold >= 250 }
+			root.culture = { has_innovation = innovation_barracks }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = stables_02
+		root = { remove_short_term_gold = 250 }
+	}
+}
+
+# Blacksmiths
+auto_upgrade_blacksmiths_effect = {
+	if = {
+		limit = {
+			has_building = blacksmiths_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = blacksmiths_08
+		root = { remove_short_term_gold = 2240 }
+	}
+	else_if = {
+		limit = {
+			has_building = blacksmiths_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = blacksmiths_07
+		root = { remove_short_term_gold = 1600 }
+	}
+	else_if = {
+		limit = {
+			has_building = blacksmiths_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = blacksmiths_06
+		root = { remove_short_term_gold = 1110 }
+	}
+	else_if = {
+		limit = {
+			has_building = blacksmiths_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_castle_baileys }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = blacksmiths_05
+		root = { remove_short_term_gold = 750 }
+	}
+	else_if = {
+		limit = {
+			has_building = blacksmiths_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_burhs }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = blacksmiths_04
+		root = { remove_short_term_gold = 500 }
+	}
+	else_if = {
+		limit = {
+			has_building = blacksmiths_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_burhs }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = blacksmiths_03
+		root = { remove_short_term_gold = 340 }
+	}
+	else_if = {
+		limit = {
+			has_building = blacksmiths_01
+			root = { gold >= 250 }
+			root.culture = { has_innovation = innovation_barracks }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = blacksmiths_02
+		root = { remove_short_term_gold = 250 }
+	}
+}
+
+# Workshops
+auto_upgrade_workshops_effect = {
+	if = {
+		limit = {
+			has_building = workshops_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = workshops_08
+		root = { remove_short_term_gold = 2240 }
+	}
+	else_if = {
+		limit = {
+			has_building = workshops_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = workshops_07
+		root = { remove_short_term_gold = 1600 }
+	}
+	else_if = {
+		limit = {
+			has_building = workshops_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = workshops_06
+		root = { remove_short_term_gold = 1110 }
+	}
+	else_if = {
+		limit = {
+			has_building = workshops_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = workshops_05
+		root = { remove_short_term_gold = 750 }
+	}
+	else_if = {
+		limit = {
+			has_building = workshops_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_castle_baileys }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = workshops_04
+		root = { remove_short_term_gold = 500 }
+	}
+	else_if = {
+		limit = {
+			has_building = workshops_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_castle_baileys }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = workshops_03
+		root = { remove_short_term_gold = 340 }
+	}
+	else_if = {
+		limit = {
+			has_building = workshops_01
+			root = { gold >= 250 }
+			root.culture = { has_innovation = innovation_burhs }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = workshops_02
+		root = { remove_short_term_gold = 250 }
+	}
+}
+
+# Regimental Grounds
+auto_upgrade_regimental_grounds_effect = {
+	if = {
+		limit = {
+			has_building = regimental_grounds_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = regimental_grounds_08
+		root = { remove_short_term_gold = 2240 }
+	}
+	else_if = {
+		limit = {
+			has_building = regimental_grounds_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = regimental_grounds_07
+		root = { remove_short_term_gold = 1600 }
+	}
+	else_if = {
+		limit = {
+			has_building = regimental_grounds_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = regimental_grounds_06
+		root = { remove_short_term_gold = 1110 }
+	}
+	else_if = {
+		limit = {
+			has_building = regimental_grounds_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_castle_baileys }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = regimental_grounds_05
+		root = { remove_short_term_gold = 750 }
+	}
+	else_if = {
+		limit = {
+			has_building = regimental_grounds_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_burhs }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = regimental_grounds_04
+		root = { remove_short_term_gold = 500 }
+	}
+	else_if = {
+		limit = {
+			has_building = regimental_grounds_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_burhs }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = regimental_grounds_03
+		root = { remove_short_term_gold = 340 }
+	}
+	else_if = {
+		limit = {
+			has_building = regimental_grounds_01
+			root = { gold >= 250 }
+			root.culture = { has_innovation = innovation_barracks }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = regimental_grounds_02
+		root = { remove_short_term_gold = 250 }
+	}
+}
+
+# Military Outposts
+auto_upgrade_outposts_effect = {
+	if = {
+		limit = {
+			has_building = outposts_07
+			root = { gold >= 1145 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = outposts_08
+		root = { remove_short_term_gold = 1145 }
+	}
+	else_if = {
+		limit = {
+			has_building = outposts_06
+			root = { gold >= 825 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = outposts_07
+		root = { remove_short_term_gold = 825 }
+	}
+	else_if = {
+		limit = {
+			has_building = outposts_05
+			root = { gold >= 580 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = outposts_06
+		root = { remove_short_term_gold = 580 }
+	}
+	else_if = {
+		limit = {
+			has_building = outposts_04
+			root = { gold >= 400 }
+			root.culture = { has_innovation = innovation_castle_baileys }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = outposts_05
+		root = { remove_short_term_gold = 400 }
+	}
+	else_if = {
+		limit = {
+			has_building = outposts_03
+			root = { gold >= 275 }
+			root.culture = { has_innovation = innovation_burhs }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = outposts_04
+		root = { remove_short_term_gold = 275 }
+	}
+	else_if = {
+		limit = {
+			has_building = outposts_02
+			root = { gold >= 195 }
+			root.culture = { has_innovation = innovation_burhs }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = outposts_03
+		root = { remove_short_term_gold = 195 }
+	}
+	else_if = {
+		limit = {
+			has_building = outposts_01
+			root = { gold >= 150 }
+			root.culture = { has_innovation = innovation_barracks }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = outposts_02
+		root = { remove_short_term_gold = 150 }
+	}
+}
+
+# Horse Pastures
+auto_upgrade_horse_pastures_effect = {
+	if = {
+		limit = {
+			has_building = horse_pastures_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = horse_pastures_08
+		root = { remove_short_term_gold = 2240 }
+	}
+	else_if = {
+		limit = {
+			has_building = horse_pastures_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = horse_pastures_07
+		root = { remove_short_term_gold = 1600 }
+	}
+	else_if = {
+		limit = {
+			has_building = horse_pastures_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = horse_pastures_06
+		root = { remove_short_term_gold = 1110 }
+	}
+	else_if = {
+		limit = {
+			has_building = horse_pastures_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_castle_baileys }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = horse_pastures_05
+		root = { remove_short_term_gold = 750 }
+	}
+	else_if = {
+		limit = {
+			has_building = horse_pastures_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_burhs }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = horse_pastures_04
+		root = { remove_short_term_gold = 500 }
+	}
+	else_if = {
+		limit = {
+			has_building = horse_pastures_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_burhs }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = horse_pastures_03
+		root = { remove_short_term_gold = 340 }
+	}
+	else_if = {
+		limit = {
+			has_building = horse_pastures_01
+			root = { gold >= 250 }
+			root.culture = { has_innovation = innovation_barracks }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = horse_pastures_02
+		root = { remove_short_term_gold = 250 }
+	}
+}
+
+# Camel Farms
+auto_upgrade_camel_farms_effect = {
+	if = {
+		limit = {
+			has_building = camel_farms_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = camel_farms_08
+		root = { remove_short_term_gold = 2240 }
+	}
+	else_if = {
+		limit = {
+			has_building = camel_farms_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = camel_farms_07
+		root = { remove_short_term_gold = 1600 }
+	}
+	else_if = {
+		limit = {
+			has_building = camel_farms_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = camel_farms_06
+		root = { remove_short_term_gold = 1110 }
+	}
+	else_if = {
+		limit = {
+			has_building = camel_farms_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_castle_baileys }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = camel_farms_05
+		root = { remove_short_term_gold = 750 }
+	}
+	else_if = {
+		limit = {
+			has_building = camel_farms_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_burhs }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = camel_farms_04
+		root = { remove_short_term_gold = 500 }
+	}
+	else_if = {
+		limit = {
+			has_building = camel_farms_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_burhs }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = camel_farms_03
+		root = { remove_short_term_gold = 340 }
+	}
+	else_if = {
+		limit = {
+			has_building = camel_farms_01
+			root = { gold >= 250 }
+			root.culture = { has_innovation = innovation_barracks }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = camel_farms_02
+		root = { remove_short_term_gold = 250 }
+	}
+}
+
+# ========================================
+# FORTIFICATION BUILDINGS
+# ========================================
+
+# Ramparts
+auto_upgrade_ramparts_effect = {
+	if = {
+		limit = {
+			has_building = ramparts_07
+			root = { gold >= 1145 }
+			root.culture = { has_innovation = innovation_machicolations }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = ramparts_08
+		root = { remove_short_term_gold = 1145 }
+	}
+	else_if = {
+		limit = {
+			has_building = ramparts_06
+			root = { gold >= 825 }
+			root.culture = { has_innovation = innovation_machicolations }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = ramparts_07
+		root = { remove_short_term_gold = 825 }
+	}
+	else_if = {
+		limit = {
+			has_building = ramparts_05
+			root = { gold >= 580 }
+			root.culture = { has_innovation = innovation_hoardings }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = ramparts_06
+		root = { remove_short_term_gold = 580 }
+	}
+	else_if = {
+		limit = {
+			has_building = ramparts_04
+			root = { gold >= 400 }
+			root.culture = { has_innovation = innovation_hoardings }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = ramparts_05
+		root = { remove_short_term_gold = 400 }
+	}
+	else_if = {
+		limit = {
+			has_building = ramparts_03
+			root = { gold >= 275 }
+			root.culture = { has_innovation = innovation_battlements }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = ramparts_04
+		root = { remove_short_term_gold = 275 }
+	}
+	else_if = {
+		limit = {
+			has_building = ramparts_02
+			root = { gold >= 195 }
+			root.culture = { has_innovation = innovation_battlements }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = ramparts_03
+		root = { remove_short_term_gold = 195 }
+	}
+	else_if = {
+		limit = {
+			has_building = ramparts_01
+			root = { gold >= 150 }
+			root.culture = { has_innovation = innovation_motte }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = ramparts_02
+		root = { remove_short_term_gold = 150 }
+	}
+}
+
+# Curtain Walls
+auto_upgrade_curtain_walls_effect = {
+	if = {
+		limit = {
+			has_building = curtain_walls_07
+			root = { gold >= 1145 }
+			root.culture = { has_innovation = innovation_machicolations }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = curtain_walls_08
+		root = { remove_short_term_gold = 1145 }
+	}
+	else_if = {
+		limit = {
+			has_building = curtain_walls_06
+			root = { gold >= 825 }
+			root.culture = { has_innovation = innovation_machicolations }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = curtain_walls_07
+		root = { remove_short_term_gold = 825 }
+	}
+	else_if = {
+		limit = {
+			has_building = curtain_walls_05
+			root = { gold >= 580 }
+			root.culture = { has_innovation = innovation_hoardings }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = curtain_walls_06
+		root = { remove_short_term_gold = 580 }
+	}
+	else_if = {
+		limit = {
+			has_building = curtain_walls_04
+			root = { gold >= 400 }
+			root.culture = { has_innovation = innovation_hoardings }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = curtain_walls_05
+		root = { remove_short_term_gold = 400 }
+	}
+	else_if = {
+		limit = {
+			has_building = curtain_walls_03
+			root = { gold >= 275 }
+			root.culture = { has_innovation = innovation_battlements }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = curtain_walls_04
+		root = { remove_short_term_gold = 275 }
+	}
+	else_if = {
+		limit = {
+			has_building = curtain_walls_02
+			root = { gold >= 195 }
+			root.culture = { has_innovation = innovation_battlements }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = curtain_walls_03
+		root = { remove_short_term_gold = 195 }
+	}
+	else_if = {
+		limit = {
+			has_building = curtain_walls_01
+			root = { gold >= 150 }
+			root.culture = { has_innovation = innovation_motte }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = curtain_walls_02
+		root = { remove_short_term_gold = 150 }
+	}
+}
+
+# Watchtowers
+auto_upgrade_watchtowers_effect = {
+	if = {
+		limit = {
+			has_building = watchtowers_07
+			root = { gold >= 1145 }
+			root.culture = { has_innovation = innovation_machicolations }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = watchtowers_08
+		root = { remove_short_term_gold = 1145 }
+	}
+	else_if = {
+		limit = {
+			has_building = watchtowers_06
+			root = { gold >= 825 }
+			root.culture = { has_innovation = innovation_machicolations }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = watchtowers_07
+		root = { remove_short_term_gold = 825 }
+	}
+	else_if = {
+		limit = {
+			has_building = watchtowers_05
+			root = { gold >= 580 }
+			root.culture = { has_innovation = innovation_hoardings }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = watchtowers_06
+		root = { remove_short_term_gold = 580 }
+	}
+	else_if = {
+		limit = {
+			has_building = watchtowers_04
+			root = { gold >= 400 }
+			root.culture = { has_innovation = innovation_hoardings }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = watchtowers_05
+		root = { remove_short_term_gold = 400 }
+	}
+	else_if = {
+		limit = {
+			has_building = watchtowers_03
+			root = { gold >= 275 }
+			root.culture = { has_innovation = innovation_battlements }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = watchtowers_04
+		root = { remove_short_term_gold = 275 }
+	}
+	else_if = {
+		limit = {
+			has_building = watchtowers_02
+			root = { gold >= 195 }
+			root.culture = { has_innovation = innovation_battlements }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = watchtowers_03
+		root = { remove_short_term_gold = 195 }
+	}
+	else_if = {
+		limit = {
+			has_building = watchtowers_01
+			root = { gold >= 150 }
+			root.culture = { has_innovation = innovation_motte }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = watchtowers_02
+		root = { remove_short_term_gold = 150 }
+	}
+}
+
+# Hill Forts
+auto_upgrade_hill_forts_effect = {
+	if = {
+		limit = {
+			has_building = hill_forts_07
+			root = { gold >= 1145 }
+			root.culture = { has_innovation = innovation_machicolations }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = hill_forts_08
+		root = { remove_short_term_gold = 1145 }
+	}
+	else_if = {
+		limit = {
+			has_building = hill_forts_06
+			root = { gold >= 825 }
+			root.culture = { has_innovation = innovation_machicolations }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = hill_forts_07
+		root = { remove_short_term_gold = 825 }
+	}
+	else_if = {
+		limit = {
+			has_building = hill_forts_05
+			root = { gold >= 580 }
+			root.culture = { has_innovation = innovation_hoardings }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = hill_forts_06
+		root = { remove_short_term_gold = 580 }
+	}
+	else_if = {
+		limit = {
+			has_building = hill_forts_04
+			root = { gold >= 400 }
+			root.culture = { has_innovation = innovation_hoardings }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = hill_forts_05
+		root = { remove_short_term_gold = 400 }
+	}
+	else_if = {
+		limit = {
+			has_building = hill_forts_03
+			root = { gold >= 275 }
+			root.culture = { has_innovation = innovation_battlements }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = hill_forts_04
+		root = { remove_short_term_gold = 275 }
+	}
+	else_if = {
+		limit = {
+			has_building = hill_forts_02
+			root = { gold >= 195 }
+			root.culture = { has_innovation = innovation_battlements }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = hill_forts_03
+		root = { remove_short_term_gold = 195 }
+	}
+	else_if = {
+		limit = {
+			has_building = hill_forts_01
+			root = { gold >= 150 }
+			root.culture = { has_innovation = innovation_motte }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = hill_forts_02
+		root = { remove_short_term_gold = 150 }
+	}
+}
+
+# ========================================
+# TRIBAL BUILDINGS
+# ========================================
+
+# Palisades
+auto_upgrade_palisades_effect = {
+	if = {
+		limit = {
+			has_building = palisades_03
+			root = { gold >= 150 }
+		}
+		add_building = palisades_04
+		root = { remove_short_term_gold = 150 }
+	}
+	else_if = {
+		limit = {
+			has_building = palisades_02
+			root = { gold >= 125 }
+		}
+		add_building = palisades_03
+		root = { remove_short_term_gold = 125 }
+	}
+	else_if = {
+		limit = {
+			has_building = palisades_01
+			root = { gold >= 100 }
+		}
+		add_building = palisades_02
+		root = { remove_short_term_gold = 100 }
+	}
+}
+
+# War Camps
+auto_upgrade_war_camps_effect = {
+	if = {
+		limit = {
+			has_building = war_camps_03
+			root = { gold >= 150 }
+		}
+		add_building = war_camps_04
+		root = { remove_short_term_gold = 150 }
+	}
+	else_if = {
+		limit = {
+			has_building = war_camps_02
+			root = { gold >= 125 }
+		}
+		add_building = war_camps_03
+		root = { remove_short_term_gold = 125 }
+	}
+	else_if = {
+		limit = {
+			has_building = war_camps_01
+			root = { gold >= 100 }
+		}
+		add_building = war_camps_02
+		root = { remove_short_term_gold = 100 }
+	}
+}
+
+# Longhouses
+auto_upgrade_longhouses_effect = {
+	if = {
+		limit = {
+			has_building = longhouses_03
+			root = { gold >= 150 }
+		}
+		add_building = longhouses_04
+		root = { remove_short_term_gold = 150 }
+	}
+	else_if = {
+		limit = {
+			has_building = longhouses_02
+			root = { gold >= 125 }
+		}
+		add_building = longhouses_03
+		root = { remove_short_term_gold = 125 }
+	}
+	else_if = {
+		limit = {
+			has_building = longhouses_01
+			root = { gold >= 100 }
+		}
+		add_building = longhouses_02
+		root = { remove_short_term_gold = 100 }
+	}
+}
+
+# Earthworks
+auto_upgrade_earthworks_effect = {
+	if = {
+		limit = {
+			has_building = earthworks_03
+			root = { gold >= 150 }
+		}
+		add_building = earthworks_04
+		root = { remove_short_term_gold = 150 }
+	}
+	else_if = {
+		limit = {
+			has_building = earthworks_02
+			root = { gold >= 125 }
+		}
+		add_building = earthworks_03
+		root = { remove_short_term_gold = 125 }
+	}
+	else_if = {
+		limit = {
+			has_building = earthworks_01
+			root = { gold >= 100 }
+		}
+		add_building = earthworks_02
+		root = { remove_short_term_gold = 100 }
+	}
+}
+
+# Hunting Grounds (Tribal)
+auto_upgrade_hunting_grounds_tribal_effect = {
+	if = {
+		limit = {
+			has_building = hunting_grounds_tribal_03
+			root = { gold >= 150 }
+		}
+		add_building = hunting_grounds_tribal_04
+		root = { remove_short_term_gold = 150 }
+	}
+	else_if = {
+		limit = {
+			has_building = hunting_grounds_tribal_02
+			root = { gold >= 125 }
+		}
+		add_building = hunting_grounds_tribal_03
+		root = { remove_short_term_gold = 125 }
+	}
+	else_if = {
+		limit = {
+			has_building = hunting_grounds_tribal_01
+			root = { gold >= 100 }
+		}
+		add_building = hunting_grounds_tribal_02
+		root = { remove_short_term_gold = 100 }
+	}
+}
+
+# Burial Grounds
+auto_upgrade_burial_grounds_effect = {
+	if = {
+		limit = {
+			has_building = burial_grounds_03
+			root = { gold >= 150 }
+		}
+		add_building = burial_grounds_04
+		root = { remove_short_term_gold = 150 }
+	}
+	else_if = {
+		limit = {
+			has_building = burial_grounds_02
+			root = { gold >= 125 }
+		}
+		add_building = burial_grounds_03
+		root = { remove_short_term_gold = 125 }
+	}
+	else_if = {
+		limit = {
+			has_building = burial_grounds_01
+			root = { gold >= 100 }
+		}
+		add_building = burial_grounds_02
+		root = { remove_short_term_gold = 100 }
+	}
+}
+
+# Market Villages
+auto_upgrade_market_villages_effect = {
+	if = {
+		limit = {
+			has_building = market_villages_03
+			root = { gold >= 150 }
+		}
+		add_building = market_villages_04
+		root = { remove_short_term_gold = 150 }
+	}
+	else_if = {
+		limit = {
+			has_building = market_villages_02
+			root = { gold >= 125 }
+		}
+		add_building = market_villages_03
+		root = { remove_short_term_gold = 125 }
+	}
+	else_if = {
+		limit = {
+			has_building = market_villages_01
+			root = { gold >= 100 }
+		}
+		add_building = market_villages_02
+		root = { remove_short_term_gold = 100 }
+	}
+}
+
+# ========================================
+# MASTER EFFECTS
+# ========================================
+
+# Upgrades all buildings in a single province
+auto_upgrade_province_effect = {
+	# Province scope, ROOT = character
+
+	# --- Main Holdings (upgrade first to unlock higher tier buildings) ---
+	auto_upgrade_castle_effect = yes
+	auto_upgrade_city_effect = yes
+	auto_upgrade_temple_effect = yes
+	auto_upgrade_tribe_effect = yes
+
+	# --- Tribal Buildings ---
+	auto_upgrade_palisades_effect = yes
+	auto_upgrade_war_camps_effect = yes
+	auto_upgrade_longhouses_effect = yes
+	auto_upgrade_earthworks_effect = yes
+	auto_upgrade_hunting_grounds_tribal_effect = yes
+	auto_upgrade_burial_grounds_effect = yes
+	auto_upgrade_market_villages_effect = yes
+
+	# --- Fortification Buildings ---
+	auto_upgrade_ramparts_effect = yes
+	auto_upgrade_curtain_walls_effect = yes
+	auto_upgrade_watchtowers_effect = yes
+	auto_upgrade_hill_forts_effect = yes
+
+	# --- Economy Buildings ---
+	auto_upgrade_farm_estates_effect = yes
+	auto_upgrade_cereal_fields_effect = yes
+	auto_upgrade_orchards_effect = yes
+	auto_upgrade_pastures_effect = yes
+	auto_upgrade_hunting_grounds_effect = yes
+	auto_upgrade_logging_camps_effect = yes
+	auto_upgrade_peat_quarries_effect = yes
+	auto_upgrade_hill_farms_effect = yes
+	auto_upgrade_quarries_effect = yes
+	auto_upgrade_common_tradeport_effect = yes
+	auto_upgrade_caravanserai_effect = yes
+	auto_upgrade_watermills_effect = yes
+	auto_upgrade_windmills_effect = yes
+	auto_upgrade_qanats_effect = yes
+	auto_upgrade_paddy_fields_effect = yes
+	auto_upgrade_elephant_pens_effect = yes
+	auto_upgrade_plantations_effect = yes
+
+	# --- Military Buildings ---
+	auto_upgrade_barracks_effect = yes
+	auto_upgrade_militia_camps_effect = yes
+	auto_upgrade_stables_effect = yes
+	auto_upgrade_blacksmiths_effect = yes
+	auto_upgrade_workshops_effect = yes
+	auto_upgrade_regimental_grounds_effect = yes
+	auto_upgrade_outposts_effect = yes
+	auto_upgrade_horse_pastures_effect = yes
+	auto_upgrade_camel_farms_effect = yes
+}
+
+# Upgrades all buildings across all personally held counties
+auto_upgrade_all_effect = {
+	# Character scope
+	every_held_title = {
+		limit = { tier = tier_county }
+		every_county_province = {
+			limit = { has_holding = yes }
+			auto_upgrade_province_effect = yes
+		}
+	}
+}
