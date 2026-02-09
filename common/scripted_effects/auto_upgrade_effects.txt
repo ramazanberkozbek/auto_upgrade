@@ -1,7 +1,6 @@
 # Auto Upgrade Buildings - Scripted Effects
 # Generated from ck3_buildings_database.json
 # Only upgrades EXISTING buildings - no new construction
-# Checks: gold, innovation (technology), holding level
 
 # ========================================
 # MAIN HOLDINGS
@@ -16,7 +15,7 @@ auto_upgrade_castle_effect = {
 			root.culture = { has_innovation = innovation_royal_armory }
 		}
 		add_building = castle_05
-		root = { remove_short_term_gold = 1000 }
+		hidden_effect = { root = { remove_short_term_gold = 1000 change_variable = { name = auto_upgrade_total_cost value = 1000 } } }
 	}
 	else_if = {
 		limit = {
@@ -25,7 +24,7 @@ auto_upgrade_castle_effect = {
 			root.culture = { has_innovation = innovation_royal_armory }
 		}
 		add_building = castle_04
-		root = { remove_short_term_gold = 850 }
+		hidden_effect = { root = { remove_short_term_gold = 850 change_variable = { name = auto_upgrade_total_cost value = 850 } } }
 	}
 	else_if = {
 		limit = {
@@ -34,7 +33,7 @@ auto_upgrade_castle_effect = {
 			root.culture = { has_innovation = innovation_castle_baileys }
 		}
 		add_building = castle_03
-		root = { remove_short_term_gold = 700 }
+		hidden_effect = { root = { remove_short_term_gold = 700 change_variable = { name = auto_upgrade_total_cost value = 700 } } }
 	}
 	else_if = {
 		limit = {
@@ -43,7 +42,7 @@ auto_upgrade_castle_effect = {
 			root.culture = { has_innovation = innovation_battlements }
 		}
 		add_building = castle_02
-		root = { remove_short_term_gold = 550 }
+		hidden_effect = { root = { remove_short_term_gold = 550 change_variable = { name = auto_upgrade_total_cost value = 550 } } }
 	}
 }
 
@@ -56,7 +55,7 @@ auto_upgrade_city_effect = {
 			root.culture = { has_innovation = innovation_royal_armory }
 		}
 		add_building = city_05
-		root = { remove_short_term_gold = 1000 }
+		hidden_effect = { root = { remove_short_term_gold = 1000 change_variable = { name = auto_upgrade_total_cost value = 1000 } } }
 	}
 	else_if = {
 		limit = {
@@ -65,7 +64,7 @@ auto_upgrade_city_effect = {
 			root.culture = { has_innovation = innovation_royal_armory }
 		}
 		add_building = city_04
-		root = { remove_short_term_gold = 850 }
+		hidden_effect = { root = { remove_short_term_gold = 850 change_variable = { name = auto_upgrade_total_cost value = 850 } } }
 	}
 	else_if = {
 		limit = {
@@ -74,7 +73,7 @@ auto_upgrade_city_effect = {
 			root.culture = { has_innovation = innovation_castle_baileys }
 		}
 		add_building = city_03
-		root = { remove_short_term_gold = 700 }
+		hidden_effect = { root = { remove_short_term_gold = 700 change_variable = { name = auto_upgrade_total_cost value = 700 } } }
 	}
 	else_if = {
 		limit = {
@@ -83,7 +82,7 @@ auto_upgrade_city_effect = {
 			root.culture = { has_innovation = innovation_burhs }
 		}
 		add_building = city_02
-		root = { remove_short_term_gold = 550 }
+		hidden_effect = { root = { remove_short_term_gold = 550 change_variable = { name = auto_upgrade_total_cost value = 550 } } }
 	}
 }
 
@@ -96,7 +95,7 @@ auto_upgrade_temple_effect = {
 			root.culture = { has_innovation = innovation_royal_armory }
 		}
 		add_building = temple_05
-		root = { remove_short_term_gold = 1000 }
+		hidden_effect = { root = { remove_short_term_gold = 1000 change_variable = { name = auto_upgrade_total_cost value = 1000 } } }
 	}
 	else_if = {
 		limit = {
@@ -105,7 +104,7 @@ auto_upgrade_temple_effect = {
 			root.culture = { has_innovation = innovation_royal_armory }
 		}
 		add_building = temple_04
-		root = { remove_short_term_gold = 850 }
+		hidden_effect = { root = { remove_short_term_gold = 850 change_variable = { name = auto_upgrade_total_cost value = 850 } } }
 	}
 	else_if = {
 		limit = {
@@ -114,7 +113,7 @@ auto_upgrade_temple_effect = {
 			root.culture = { has_innovation = innovation_castle_baileys }
 		}
 		add_building = temple_03
-		root = { remove_short_term_gold = 700 }
+		hidden_effect = { root = { remove_short_term_gold = 700 change_variable = { name = auto_upgrade_total_cost value = 700 } } }
 	}
 	else_if = {
 		limit = {
@@ -123,7 +122,7 @@ auto_upgrade_temple_effect = {
 			root.culture = { has_innovation = innovation_battlements }
 		}
 		add_building = temple_02
-		root = { remove_short_term_gold = 550 }
+		hidden_effect = { root = { remove_short_term_gold = 550 change_variable = { name = auto_upgrade_total_cost value = 550 } } }
 	}
 }
 
@@ -135,7 +134,7 @@ auto_upgrade_tribe_effect = {
 			root = { gold >= 150 }
 		}
 		add_building = tribe_04
-		root = { remove_short_term_gold = 150 }
+		hidden_effect = { root = { remove_short_term_gold = 150 change_variable = { name = auto_upgrade_total_cost value = 150 } } }
 	}
 	else_if = {
 		limit = {
@@ -143,7 +142,7 @@ auto_upgrade_tribe_effect = {
 			root = { gold >= 125 }
 		}
 		add_building = tribe_03
-		root = { remove_short_term_gold = 125 }
+		hidden_effect = { root = { remove_short_term_gold = 125 change_variable = { name = auto_upgrade_total_cost value = 125 } } }
 	}
 	else_if = {
 		limit = {
@@ -151,7 +150,7 @@ auto_upgrade_tribe_effect = {
 			root = { gold >= 100 }
 		}
 		add_building = tribe_02
-		root = { remove_short_term_gold = 100 }
+		hidden_effect = { root = { remove_short_term_gold = 100 change_variable = { name = auto_upgrade_total_cost value = 100 } } }
 	}
 }
 
@@ -169,7 +168,7 @@ auto_upgrade_farm_estates_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = farm_estates_08
-		root = { remove_short_term_gold = 2240 }
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
 	}
 	else_if = {
 		limit = {
@@ -179,7 +178,7 @@ auto_upgrade_farm_estates_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = farm_estates_07
-		root = { remove_short_term_gold = 1600 }
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
 	}
 	else_if = {
 		limit = {
@@ -189,7 +188,7 @@ auto_upgrade_farm_estates_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = farm_estates_06
-		root = { remove_short_term_gold = 1110 }
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
 	}
 	else_if = {
 		limit = {
@@ -199,7 +198,7 @@ auto_upgrade_farm_estates_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = farm_estates_05
-		root = { remove_short_term_gold = 750 }
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
 	}
 	else_if = {
 		limit = {
@@ -209,7 +208,7 @@ auto_upgrade_farm_estates_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = farm_estates_04
-		root = { remove_short_term_gold = 500 }
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
 	}
 	else_if = {
 		limit = {
@@ -219,7 +218,7 @@ auto_upgrade_farm_estates_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = farm_estates_03
-		root = { remove_short_term_gold = 340 }
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
 	}
 	else_if = {
 		limit = {
@@ -229,7 +228,7 @@ auto_upgrade_farm_estates_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = farm_estates_02
-		root = { remove_short_term_gold = 250 }
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
 	}
 }
 
@@ -243,7 +242,7 @@ auto_upgrade_cereal_fields_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = cereal_fields_08
-		root = { remove_short_term_gold = 2240 }
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
 	}
 	else_if = {
 		limit = {
@@ -253,7 +252,7 @@ auto_upgrade_cereal_fields_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = cereal_fields_07
-		root = { remove_short_term_gold = 1600 }
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
 	}
 	else_if = {
 		limit = {
@@ -263,7 +262,7 @@ auto_upgrade_cereal_fields_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = cereal_fields_06
-		root = { remove_short_term_gold = 1110 }
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
 	}
 	else_if = {
 		limit = {
@@ -273,7 +272,7 @@ auto_upgrade_cereal_fields_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = cereal_fields_05
-		root = { remove_short_term_gold = 750 }
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
 	}
 	else_if = {
 		limit = {
@@ -283,7 +282,7 @@ auto_upgrade_cereal_fields_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = cereal_fields_04
-		root = { remove_short_term_gold = 500 }
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
 	}
 	else_if = {
 		limit = {
@@ -293,7 +292,7 @@ auto_upgrade_cereal_fields_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = cereal_fields_03
-		root = { remove_short_term_gold = 340 }
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
 	}
 	else_if = {
 		limit = {
@@ -303,7 +302,7 @@ auto_upgrade_cereal_fields_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = cereal_fields_02
-		root = { remove_short_term_gold = 250 }
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
 	}
 }
 
@@ -317,7 +316,7 @@ auto_upgrade_orchards_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = orchards_08
-		root = { remove_short_term_gold = 2240 }
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
 	}
 	else_if = {
 		limit = {
@@ -327,7 +326,7 @@ auto_upgrade_orchards_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = orchards_07
-		root = { remove_short_term_gold = 1600 }
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
 	}
 	else_if = {
 		limit = {
@@ -337,7 +336,7 @@ auto_upgrade_orchards_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = orchards_06
-		root = { remove_short_term_gold = 1110 }
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
 	}
 	else_if = {
 		limit = {
@@ -347,7 +346,7 @@ auto_upgrade_orchards_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = orchards_05
-		root = { remove_short_term_gold = 750 }
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
 	}
 	else_if = {
 		limit = {
@@ -357,7 +356,7 @@ auto_upgrade_orchards_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = orchards_04
-		root = { remove_short_term_gold = 500 }
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
 	}
 	else_if = {
 		limit = {
@@ -367,7 +366,7 @@ auto_upgrade_orchards_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = orchards_03
-		root = { remove_short_term_gold = 340 }
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
 	}
 	else_if = {
 		limit = {
@@ -377,7 +376,7 @@ auto_upgrade_orchards_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = orchards_02
-		root = { remove_short_term_gold = 250 }
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
 	}
 }
 
@@ -391,7 +390,7 @@ auto_upgrade_pastures_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = pastures_08
-		root = { remove_short_term_gold = 2240 }
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
 	}
 	else_if = {
 		limit = {
@@ -401,7 +400,7 @@ auto_upgrade_pastures_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = pastures_07
-		root = { remove_short_term_gold = 1600 }
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
 	}
 	else_if = {
 		limit = {
@@ -411,7 +410,7 @@ auto_upgrade_pastures_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = pastures_06
-		root = { remove_short_term_gold = 1110 }
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
 	}
 	else_if = {
 		limit = {
@@ -421,7 +420,7 @@ auto_upgrade_pastures_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = pastures_05
-		root = { remove_short_term_gold = 750 }
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
 	}
 	else_if = {
 		limit = {
@@ -431,7 +430,7 @@ auto_upgrade_pastures_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = pastures_04
-		root = { remove_short_term_gold = 500 }
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
 	}
 	else_if = {
 		limit = {
@@ -441,7 +440,7 @@ auto_upgrade_pastures_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = pastures_03
-		root = { remove_short_term_gold = 340 }
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
 	}
 	else_if = {
 		limit = {
@@ -451,7 +450,7 @@ auto_upgrade_pastures_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = pastures_02
-		root = { remove_short_term_gold = 250 }
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
 	}
 }
 
@@ -465,7 +464,7 @@ auto_upgrade_hunting_grounds_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = hunting_grounds_08
-		root = { remove_short_term_gold = 1145 }
+		hidden_effect = { root = { remove_short_term_gold = 1145 change_variable = { name = auto_upgrade_total_cost value = 1145 } } }
 	}
 	else_if = {
 		limit = {
@@ -475,7 +474,7 @@ auto_upgrade_hunting_grounds_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = hunting_grounds_07
-		root = { remove_short_term_gold = 825 }
+		hidden_effect = { root = { remove_short_term_gold = 825 change_variable = { name = auto_upgrade_total_cost value = 825 } } }
 	}
 	else_if = {
 		limit = {
@@ -485,7 +484,7 @@ auto_upgrade_hunting_grounds_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = hunting_grounds_06
-		root = { remove_short_term_gold = 580 }
+		hidden_effect = { root = { remove_short_term_gold = 580 change_variable = { name = auto_upgrade_total_cost value = 580 } } }
 	}
 	else_if = {
 		limit = {
@@ -495,7 +494,7 @@ auto_upgrade_hunting_grounds_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = hunting_grounds_05
-		root = { remove_short_term_gold = 400 }
+		hidden_effect = { root = { remove_short_term_gold = 400 change_variable = { name = auto_upgrade_total_cost value = 400 } } }
 	}
 	else_if = {
 		limit = {
@@ -505,7 +504,7 @@ auto_upgrade_hunting_grounds_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = hunting_grounds_04
-		root = { remove_short_term_gold = 275 }
+		hidden_effect = { root = { remove_short_term_gold = 275 change_variable = { name = auto_upgrade_total_cost value = 275 } } }
 	}
 	else_if = {
 		limit = {
@@ -515,7 +514,7 @@ auto_upgrade_hunting_grounds_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = hunting_grounds_03
-		root = { remove_short_term_gold = 195 }
+		hidden_effect = { root = { remove_short_term_gold = 195 change_variable = { name = auto_upgrade_total_cost value = 195 } } }
 	}
 	else_if = {
 		limit = {
@@ -525,7 +524,7 @@ auto_upgrade_hunting_grounds_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = hunting_grounds_02
-		root = { remove_short_term_gold = 150 }
+		hidden_effect = { root = { remove_short_term_gold = 150 change_variable = { name = auto_upgrade_total_cost value = 150 } } }
 	}
 }
 
@@ -539,7 +538,7 @@ auto_upgrade_logging_camps_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = logging_camps_08
-		root = { remove_short_term_gold = 2240 }
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
 	}
 	else_if = {
 		limit = {
@@ -549,7 +548,7 @@ auto_upgrade_logging_camps_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = logging_camps_07
-		root = { remove_short_term_gold = 1600 }
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
 	}
 	else_if = {
 		limit = {
@@ -559,7 +558,7 @@ auto_upgrade_logging_camps_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = logging_camps_06
-		root = { remove_short_term_gold = 1110 }
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
 	}
 	else_if = {
 		limit = {
@@ -569,7 +568,7 @@ auto_upgrade_logging_camps_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = logging_camps_05
-		root = { remove_short_term_gold = 750 }
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
 	}
 	else_if = {
 		limit = {
@@ -579,7 +578,7 @@ auto_upgrade_logging_camps_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = logging_camps_04
-		root = { remove_short_term_gold = 500 }
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
 	}
 	else_if = {
 		limit = {
@@ -589,7 +588,7 @@ auto_upgrade_logging_camps_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = logging_camps_03
-		root = { remove_short_term_gold = 340 }
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
 	}
 	else_if = {
 		limit = {
@@ -599,7 +598,7 @@ auto_upgrade_logging_camps_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = logging_camps_02
-		root = { remove_short_term_gold = 250 }
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
 	}
 }
 
@@ -613,7 +612,7 @@ auto_upgrade_peat_quarries_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = peat_quarries_08
-		root = { remove_short_term_gold = 2240 }
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
 	}
 	else_if = {
 		limit = {
@@ -623,7 +622,7 @@ auto_upgrade_peat_quarries_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = peat_quarries_07
-		root = { remove_short_term_gold = 1600 }
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
 	}
 	else_if = {
 		limit = {
@@ -633,7 +632,7 @@ auto_upgrade_peat_quarries_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = peat_quarries_06
-		root = { remove_short_term_gold = 1110 }
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
 	}
 	else_if = {
 		limit = {
@@ -643,7 +642,7 @@ auto_upgrade_peat_quarries_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = peat_quarries_05
-		root = { remove_short_term_gold = 750 }
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
 	}
 	else_if = {
 		limit = {
@@ -653,7 +652,7 @@ auto_upgrade_peat_quarries_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = peat_quarries_04
-		root = { remove_short_term_gold = 500 }
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
 	}
 	else_if = {
 		limit = {
@@ -663,7 +662,7 @@ auto_upgrade_peat_quarries_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = peat_quarries_03
-		root = { remove_short_term_gold = 340 }
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
 	}
 	else_if = {
 		limit = {
@@ -673,7 +672,7 @@ auto_upgrade_peat_quarries_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = peat_quarries_02
-		root = { remove_short_term_gold = 250 }
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
 	}
 }
 
@@ -687,7 +686,7 @@ auto_upgrade_hill_farms_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = hill_farms_08
-		root = { remove_short_term_gold = 2240 }
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
 	}
 	else_if = {
 		limit = {
@@ -697,7 +696,7 @@ auto_upgrade_hill_farms_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = hill_farms_07
-		root = { remove_short_term_gold = 1600 }
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
 	}
 	else_if = {
 		limit = {
@@ -707,7 +706,7 @@ auto_upgrade_hill_farms_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = hill_farms_06
-		root = { remove_short_term_gold = 1110 }
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
 	}
 	else_if = {
 		limit = {
@@ -717,7 +716,7 @@ auto_upgrade_hill_farms_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = hill_farms_05
-		root = { remove_short_term_gold = 750 }
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
 	}
 	else_if = {
 		limit = {
@@ -727,7 +726,7 @@ auto_upgrade_hill_farms_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = hill_farms_04
-		root = { remove_short_term_gold = 500 }
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
 	}
 	else_if = {
 		limit = {
@@ -737,7 +736,7 @@ auto_upgrade_hill_farms_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = hill_farms_03
-		root = { remove_short_term_gold = 340 }
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
 	}
 	else_if = {
 		limit = {
@@ -747,7 +746,7 @@ auto_upgrade_hill_farms_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = hill_farms_02
-		root = { remove_short_term_gold = 250 }
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
 	}
 }
 
@@ -761,7 +760,7 @@ auto_upgrade_quarries_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = quarries_08
-		root = { remove_short_term_gold = 2240 }
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
 	}
 	else_if = {
 		limit = {
@@ -771,7 +770,7 @@ auto_upgrade_quarries_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = quarries_07
-		root = { remove_short_term_gold = 1600 }
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
 	}
 	else_if = {
 		limit = {
@@ -781,7 +780,7 @@ auto_upgrade_quarries_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = quarries_06
-		root = { remove_short_term_gold = 1110 }
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
 	}
 	else_if = {
 		limit = {
@@ -791,7 +790,7 @@ auto_upgrade_quarries_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = quarries_05
-		root = { remove_short_term_gold = 750 }
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
 	}
 	else_if = {
 		limit = {
@@ -801,7 +800,7 @@ auto_upgrade_quarries_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = quarries_04
-		root = { remove_short_term_gold = 500 }
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
 	}
 	else_if = {
 		limit = {
@@ -811,7 +810,7 @@ auto_upgrade_quarries_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = quarries_03
-		root = { remove_short_term_gold = 340 }
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
 	}
 	else_if = {
 		limit = {
@@ -821,7 +820,7 @@ auto_upgrade_quarries_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = quarries_02
-		root = { remove_short_term_gold = 250 }
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
 	}
 }
 
@@ -835,7 +834,7 @@ auto_upgrade_common_tradeport_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = common_tradeport_08
-		root = { remove_short_term_gold = 2240 }
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
 	}
 	else_if = {
 		limit = {
@@ -845,7 +844,7 @@ auto_upgrade_common_tradeport_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = common_tradeport_07
-		root = { remove_short_term_gold = 1600 }
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
 	}
 	else_if = {
 		limit = {
@@ -855,7 +854,7 @@ auto_upgrade_common_tradeport_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = common_tradeport_06
-		root = { remove_short_term_gold = 1110 }
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
 	}
 	else_if = {
 		limit = {
@@ -865,7 +864,7 @@ auto_upgrade_common_tradeport_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = common_tradeport_05
-		root = { remove_short_term_gold = 750 }
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
 	}
 	else_if = {
 		limit = {
@@ -875,7 +874,7 @@ auto_upgrade_common_tradeport_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = common_tradeport_04
-		root = { remove_short_term_gold = 500 }
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
 	}
 	else_if = {
 		limit = {
@@ -885,7 +884,7 @@ auto_upgrade_common_tradeport_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = common_tradeport_03
-		root = { remove_short_term_gold = 340 }
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
 	}
 	else_if = {
 		limit = {
@@ -895,7 +894,7 @@ auto_upgrade_common_tradeport_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = common_tradeport_02
-		root = { remove_short_term_gold = 250 }
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
 	}
 }
 
@@ -909,7 +908,7 @@ auto_upgrade_caravanserai_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = caravanserai_08
-		root = { remove_short_term_gold = 3335 }
+		hidden_effect = { root = { remove_short_term_gold = 3335 change_variable = { name = auto_upgrade_total_cost value = 3335 } } }
 	}
 	else_if = {
 		limit = {
@@ -919,7 +918,7 @@ auto_upgrade_caravanserai_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = caravanserai_07
-		root = { remove_short_term_gold = 2375 }
+		hidden_effect = { root = { remove_short_term_gold = 2375 change_variable = { name = auto_upgrade_total_cost value = 2375 } } }
 	}
 	else_if = {
 		limit = {
@@ -929,7 +928,7 @@ auto_upgrade_caravanserai_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = caravanserai_06
-		root = { remove_short_term_gold = 1640 }
+		hidden_effect = { root = { remove_short_term_gold = 1640 change_variable = { name = auto_upgrade_total_cost value = 1640 } } }
 	}
 	else_if = {
 		limit = {
@@ -939,7 +938,7 @@ auto_upgrade_caravanserai_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = caravanserai_05
-		root = { remove_short_term_gold = 1100 }
+		hidden_effect = { root = { remove_short_term_gold = 1100 change_variable = { name = auto_upgrade_total_cost value = 1100 } } }
 	}
 	else_if = {
 		limit = {
@@ -949,7 +948,7 @@ auto_upgrade_caravanserai_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = caravanserai_04
-		root = { remove_short_term_gold = 725 }
+		hidden_effect = { root = { remove_short_term_gold = 725 change_variable = { name = auto_upgrade_total_cost value = 725 } } }
 	}
 	else_if = {
 		limit = {
@@ -959,7 +958,7 @@ auto_upgrade_caravanserai_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = caravanserai_03
-		root = { remove_short_term_gold = 485 }
+		hidden_effect = { root = { remove_short_term_gold = 485 change_variable = { name = auto_upgrade_total_cost value = 485 } } }
 	}
 	else_if = {
 		limit = {
@@ -969,7 +968,7 @@ auto_upgrade_caravanserai_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = caravanserai_02
-		root = { remove_short_term_gold = 350 }
+		hidden_effect = { root = { remove_short_term_gold = 350 change_variable = { name = auto_upgrade_total_cost value = 350 } } }
 	}
 }
 
@@ -983,7 +982,7 @@ auto_upgrade_watermills_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = watermills_08
-		root = { remove_short_term_gold = 3335 }
+		hidden_effect = { root = { remove_short_term_gold = 3335 change_variable = { name = auto_upgrade_total_cost value = 3335 } } }
 	}
 	else_if = {
 		limit = {
@@ -993,7 +992,7 @@ auto_upgrade_watermills_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = watermills_07
-		root = { remove_short_term_gold = 2375 }
+		hidden_effect = { root = { remove_short_term_gold = 2375 change_variable = { name = auto_upgrade_total_cost value = 2375 } } }
 	}
 	else_if = {
 		limit = {
@@ -1003,7 +1002,7 @@ auto_upgrade_watermills_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = watermills_06
-		root = { remove_short_term_gold = 1640 }
+		hidden_effect = { root = { remove_short_term_gold = 1640 change_variable = { name = auto_upgrade_total_cost value = 1640 } } }
 	}
 	else_if = {
 		limit = {
@@ -1013,7 +1012,7 @@ auto_upgrade_watermills_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = watermills_05
-		root = { remove_short_term_gold = 1100 }
+		hidden_effect = { root = { remove_short_term_gold = 1100 change_variable = { name = auto_upgrade_total_cost value = 1100 } } }
 	}
 	else_if = {
 		limit = {
@@ -1023,7 +1022,7 @@ auto_upgrade_watermills_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = watermills_04
-		root = { remove_short_term_gold = 725 }
+		hidden_effect = { root = { remove_short_term_gold = 725 change_variable = { name = auto_upgrade_total_cost value = 725 } } }
 	}
 	else_if = {
 		limit = {
@@ -1033,7 +1032,7 @@ auto_upgrade_watermills_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = watermills_03
-		root = { remove_short_term_gold = 485 }
+		hidden_effect = { root = { remove_short_term_gold = 485 change_variable = { name = auto_upgrade_total_cost value = 485 } } }
 	}
 	else_if = {
 		limit = {
@@ -1043,7 +1042,7 @@ auto_upgrade_watermills_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = watermills_02
-		root = { remove_short_term_gold = 350 }
+		hidden_effect = { root = { remove_short_term_gold = 350 change_variable = { name = auto_upgrade_total_cost value = 350 } } }
 	}
 }
 
@@ -1057,7 +1056,7 @@ auto_upgrade_windmills_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = windmills_08
-		root = { remove_short_term_gold = 3335 }
+		hidden_effect = { root = { remove_short_term_gold = 3335 change_variable = { name = auto_upgrade_total_cost value = 3335 } } }
 	}
 	else_if = {
 		limit = {
@@ -1067,7 +1066,7 @@ auto_upgrade_windmills_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = windmills_07
-		root = { remove_short_term_gold = 2375 }
+		hidden_effect = { root = { remove_short_term_gold = 2375 change_variable = { name = auto_upgrade_total_cost value = 2375 } } }
 	}
 	else_if = {
 		limit = {
@@ -1077,7 +1076,7 @@ auto_upgrade_windmills_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = windmills_06
-		root = { remove_short_term_gold = 1640 }
+		hidden_effect = { root = { remove_short_term_gold = 1640 change_variable = { name = auto_upgrade_total_cost value = 1640 } } }
 	}
 	else_if = {
 		limit = {
@@ -1087,7 +1086,7 @@ auto_upgrade_windmills_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = windmills_05
-		root = { remove_short_term_gold = 1100 }
+		hidden_effect = { root = { remove_short_term_gold = 1100 change_variable = { name = auto_upgrade_total_cost value = 1100 } } }
 	}
 	else_if = {
 		limit = {
@@ -1097,7 +1096,7 @@ auto_upgrade_windmills_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = windmills_04
-		root = { remove_short_term_gold = 725 }
+		hidden_effect = { root = { remove_short_term_gold = 725 change_variable = { name = auto_upgrade_total_cost value = 725 } } }
 	}
 	else_if = {
 		limit = {
@@ -1107,7 +1106,7 @@ auto_upgrade_windmills_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = windmills_03
-		root = { remove_short_term_gold = 485 }
+		hidden_effect = { root = { remove_short_term_gold = 485 change_variable = { name = auto_upgrade_total_cost value = 485 } } }
 	}
 	else_if = {
 		limit = {
@@ -1117,7 +1116,7 @@ auto_upgrade_windmills_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = windmills_02
-		root = { remove_short_term_gold = 350 }
+		hidden_effect = { root = { remove_short_term_gold = 350 change_variable = { name = auto_upgrade_total_cost value = 350 } } }
 	}
 }
 
@@ -1130,7 +1129,7 @@ auto_upgrade_qanats_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = qanats_08
-		root = { remove_short_term_gold = 2240 }
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
 	}
 	else_if = {
 		limit = {
@@ -1139,7 +1138,7 @@ auto_upgrade_qanats_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = qanats_07
-		root = { remove_short_term_gold = 1600 }
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
 	}
 	else_if = {
 		limit = {
@@ -1148,7 +1147,7 @@ auto_upgrade_qanats_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = qanats_06
-		root = { remove_short_term_gold = 1110 }
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
 	}
 	else_if = {
 		limit = {
@@ -1157,7 +1156,7 @@ auto_upgrade_qanats_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = qanats_05
-		root = { remove_short_term_gold = 750 }
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
 	}
 	else_if = {
 		limit = {
@@ -1166,7 +1165,7 @@ auto_upgrade_qanats_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = qanats_04
-		root = { remove_short_term_gold = 500 }
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
 	}
 	else_if = {
 		limit = {
@@ -1175,7 +1174,7 @@ auto_upgrade_qanats_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = qanats_03
-		root = { remove_short_term_gold = 340 }
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
 	}
 	else_if = {
 		limit = {
@@ -1184,7 +1183,7 @@ auto_upgrade_qanats_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = qanats_02
-		root = { remove_short_term_gold = 250 }
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
 	}
 }
 
@@ -1198,7 +1197,7 @@ auto_upgrade_paddy_fields_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = paddy_fields_08
-		root = { remove_short_term_gold = 2240 }
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
 	}
 	else_if = {
 		limit = {
@@ -1208,7 +1207,7 @@ auto_upgrade_paddy_fields_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = paddy_fields_07
-		root = { remove_short_term_gold = 1600 }
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
 	}
 	else_if = {
 		limit = {
@@ -1218,7 +1217,7 @@ auto_upgrade_paddy_fields_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = paddy_fields_06
-		root = { remove_short_term_gold = 1110 }
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
 	}
 	else_if = {
 		limit = {
@@ -1228,7 +1227,7 @@ auto_upgrade_paddy_fields_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = paddy_fields_05
-		root = { remove_short_term_gold = 750 }
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
 	}
 	else_if = {
 		limit = {
@@ -1238,7 +1237,7 @@ auto_upgrade_paddy_fields_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = paddy_fields_04
-		root = { remove_short_term_gold = 500 }
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
 	}
 	else_if = {
 		limit = {
@@ -1248,7 +1247,7 @@ auto_upgrade_paddy_fields_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = paddy_fields_03
-		root = { remove_short_term_gold = 340 }
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
 	}
 	else_if = {
 		limit = {
@@ -1257,7 +1256,7 @@ auto_upgrade_paddy_fields_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = paddy_fields_02
-		root = { remove_short_term_gold = 250 }
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
 	}
 }
 
@@ -1271,7 +1270,7 @@ auto_upgrade_elephant_pens_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = elephant_pens_08
-		root = { remove_short_term_gold = 2240 }
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
 	}
 	else_if = {
 		limit = {
@@ -1281,7 +1280,7 @@ auto_upgrade_elephant_pens_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = elephant_pens_07
-		root = { remove_short_term_gold = 1600 }
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
 	}
 	else_if = {
 		limit = {
@@ -1291,7 +1290,7 @@ auto_upgrade_elephant_pens_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = elephant_pens_06
-		root = { remove_short_term_gold = 1110 }
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
 	}
 	else_if = {
 		limit = {
@@ -1301,7 +1300,7 @@ auto_upgrade_elephant_pens_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = elephant_pens_05
-		root = { remove_short_term_gold = 750 }
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
 	}
 	else_if = {
 		limit = {
@@ -1311,7 +1310,7 @@ auto_upgrade_elephant_pens_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = elephant_pens_04
-		root = { remove_short_term_gold = 500 }
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
 	}
 	else_if = {
 		limit = {
@@ -1321,7 +1320,7 @@ auto_upgrade_elephant_pens_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = elephant_pens_03
-		root = { remove_short_term_gold = 340 }
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
 	}
 	else_if = {
 		limit = {
@@ -1331,7 +1330,7 @@ auto_upgrade_elephant_pens_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = elephant_pens_02
-		root = { remove_short_term_gold = 250 }
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
 	}
 }
 
@@ -1345,7 +1344,7 @@ auto_upgrade_plantations_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = plantations_08
-		root = { remove_short_term_gold = 2240 }
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
 	}
 	else_if = {
 		limit = {
@@ -1355,7 +1354,7 @@ auto_upgrade_plantations_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = plantations_07
-		root = { remove_short_term_gold = 1600 }
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
 	}
 	else_if = {
 		limit = {
@@ -1365,7 +1364,7 @@ auto_upgrade_plantations_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = plantations_06
-		root = { remove_short_term_gold = 1110 }
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
 	}
 	else_if = {
 		limit = {
@@ -1375,7 +1374,7 @@ auto_upgrade_plantations_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = plantations_05
-		root = { remove_short_term_gold = 750 }
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
 	}
 	else_if = {
 		limit = {
@@ -1385,7 +1384,7 @@ auto_upgrade_plantations_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = plantations_04
-		root = { remove_short_term_gold = 500 }
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
 	}
 	else_if = {
 		limit = {
@@ -1395,7 +1394,7 @@ auto_upgrade_plantations_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = plantations_03
-		root = { remove_short_term_gold = 340 }
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
 	}
 	else_if = {
 		limit = {
@@ -1405,7 +1404,7 @@ auto_upgrade_plantations_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = plantations_02
-		root = { remove_short_term_gold = 250 }
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
 	}
 }
 
@@ -1423,7 +1422,7 @@ auto_upgrade_barracks_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = barracks_08
-		root = { remove_short_term_gold = 2240 }
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
 	}
 	else_if = {
 		limit = {
@@ -1433,7 +1432,7 @@ auto_upgrade_barracks_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = barracks_07
-		root = { remove_short_term_gold = 1600 }
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
 	}
 	else_if = {
 		limit = {
@@ -1443,7 +1442,7 @@ auto_upgrade_barracks_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = barracks_06
-		root = { remove_short_term_gold = 1110 }
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
 	}
 	else_if = {
 		limit = {
@@ -1453,7 +1452,7 @@ auto_upgrade_barracks_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = barracks_05
-		root = { remove_short_term_gold = 750 }
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
 	}
 	else_if = {
 		limit = {
@@ -1463,7 +1462,7 @@ auto_upgrade_barracks_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = barracks_04
-		root = { remove_short_term_gold = 500 }
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
 	}
 	else_if = {
 		limit = {
@@ -1473,7 +1472,7 @@ auto_upgrade_barracks_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = barracks_03
-		root = { remove_short_term_gold = 340 }
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
 	}
 	else_if = {
 		limit = {
@@ -1483,7 +1482,7 @@ auto_upgrade_barracks_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = barracks_02
-		root = { remove_short_term_gold = 250 }
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
 	}
 }
 
@@ -1497,7 +1496,7 @@ auto_upgrade_militia_camps_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = militia_camps_08
-		root = { remove_short_term_gold = 2240 }
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
 	}
 	else_if = {
 		limit = {
@@ -1507,7 +1506,7 @@ auto_upgrade_militia_camps_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = militia_camps_07
-		root = { remove_short_term_gold = 1600 }
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
 	}
 	else_if = {
 		limit = {
@@ -1517,7 +1516,7 @@ auto_upgrade_militia_camps_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = militia_camps_06
-		root = { remove_short_term_gold = 1110 }
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
 	}
 	else_if = {
 		limit = {
@@ -1527,7 +1526,7 @@ auto_upgrade_militia_camps_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = militia_camps_05
-		root = { remove_short_term_gold = 750 }
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
 	}
 	else_if = {
 		limit = {
@@ -1537,7 +1536,7 @@ auto_upgrade_militia_camps_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = militia_camps_04
-		root = { remove_short_term_gold = 500 }
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
 	}
 	else_if = {
 		limit = {
@@ -1547,7 +1546,7 @@ auto_upgrade_militia_camps_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = militia_camps_03
-		root = { remove_short_term_gold = 340 }
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
 	}
 	else_if = {
 		limit = {
@@ -1557,7 +1556,7 @@ auto_upgrade_militia_camps_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = militia_camps_02
-		root = { remove_short_term_gold = 250 }
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
 	}
 }
 
@@ -1571,7 +1570,7 @@ auto_upgrade_stables_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = stables_08
-		root = { remove_short_term_gold = 2240 }
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
 	}
 	else_if = {
 		limit = {
@@ -1581,7 +1580,7 @@ auto_upgrade_stables_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = stables_07
-		root = { remove_short_term_gold = 1600 }
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
 	}
 	else_if = {
 		limit = {
@@ -1591,7 +1590,7 @@ auto_upgrade_stables_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = stables_06
-		root = { remove_short_term_gold = 1110 }
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
 	}
 	else_if = {
 		limit = {
@@ -1601,7 +1600,7 @@ auto_upgrade_stables_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = stables_05
-		root = { remove_short_term_gold = 750 }
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
 	}
 	else_if = {
 		limit = {
@@ -1611,7 +1610,7 @@ auto_upgrade_stables_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = stables_04
-		root = { remove_short_term_gold = 500 }
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
 	}
 	else_if = {
 		limit = {
@@ -1621,7 +1620,7 @@ auto_upgrade_stables_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = stables_03
-		root = { remove_short_term_gold = 340 }
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
 	}
 	else_if = {
 		limit = {
@@ -1631,7 +1630,7 @@ auto_upgrade_stables_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = stables_02
-		root = { remove_short_term_gold = 250 }
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
 	}
 }
 
@@ -1645,7 +1644,7 @@ auto_upgrade_blacksmiths_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = blacksmiths_08
-		root = { remove_short_term_gold = 2240 }
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
 	}
 	else_if = {
 		limit = {
@@ -1655,7 +1654,7 @@ auto_upgrade_blacksmiths_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = blacksmiths_07
-		root = { remove_short_term_gold = 1600 }
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
 	}
 	else_if = {
 		limit = {
@@ -1665,7 +1664,7 @@ auto_upgrade_blacksmiths_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = blacksmiths_06
-		root = { remove_short_term_gold = 1110 }
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
 	}
 	else_if = {
 		limit = {
@@ -1675,7 +1674,7 @@ auto_upgrade_blacksmiths_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = blacksmiths_05
-		root = { remove_short_term_gold = 750 }
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
 	}
 	else_if = {
 		limit = {
@@ -1685,7 +1684,7 @@ auto_upgrade_blacksmiths_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = blacksmiths_04
-		root = { remove_short_term_gold = 500 }
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
 	}
 	else_if = {
 		limit = {
@@ -1695,7 +1694,7 @@ auto_upgrade_blacksmiths_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = blacksmiths_03
-		root = { remove_short_term_gold = 340 }
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
 	}
 	else_if = {
 		limit = {
@@ -1705,7 +1704,7 @@ auto_upgrade_blacksmiths_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = blacksmiths_02
-		root = { remove_short_term_gold = 250 }
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
 	}
 }
 
@@ -1719,7 +1718,7 @@ auto_upgrade_workshops_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = workshops_08
-		root = { remove_short_term_gold = 2240 }
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
 	}
 	else_if = {
 		limit = {
@@ -1729,7 +1728,7 @@ auto_upgrade_workshops_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = workshops_07
-		root = { remove_short_term_gold = 1600 }
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
 	}
 	else_if = {
 		limit = {
@@ -1739,7 +1738,7 @@ auto_upgrade_workshops_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = workshops_06
-		root = { remove_short_term_gold = 1110 }
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
 	}
 	else_if = {
 		limit = {
@@ -1749,7 +1748,7 @@ auto_upgrade_workshops_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = workshops_05
-		root = { remove_short_term_gold = 750 }
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
 	}
 	else_if = {
 		limit = {
@@ -1759,7 +1758,7 @@ auto_upgrade_workshops_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = workshops_04
-		root = { remove_short_term_gold = 500 }
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
 	}
 	else_if = {
 		limit = {
@@ -1769,7 +1768,7 @@ auto_upgrade_workshops_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = workshops_03
-		root = { remove_short_term_gold = 340 }
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
 	}
 	else_if = {
 		limit = {
@@ -1779,7 +1778,7 @@ auto_upgrade_workshops_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = workshops_02
-		root = { remove_short_term_gold = 250 }
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
 	}
 }
 
@@ -1793,7 +1792,7 @@ auto_upgrade_regimental_grounds_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = regimental_grounds_08
-		root = { remove_short_term_gold = 2240 }
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
 	}
 	else_if = {
 		limit = {
@@ -1803,7 +1802,7 @@ auto_upgrade_regimental_grounds_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = regimental_grounds_07
-		root = { remove_short_term_gold = 1600 }
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
 	}
 	else_if = {
 		limit = {
@@ -1813,7 +1812,7 @@ auto_upgrade_regimental_grounds_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = regimental_grounds_06
-		root = { remove_short_term_gold = 1110 }
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
 	}
 	else_if = {
 		limit = {
@@ -1823,7 +1822,7 @@ auto_upgrade_regimental_grounds_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = regimental_grounds_05
-		root = { remove_short_term_gold = 750 }
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
 	}
 	else_if = {
 		limit = {
@@ -1833,7 +1832,7 @@ auto_upgrade_regimental_grounds_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = regimental_grounds_04
-		root = { remove_short_term_gold = 500 }
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
 	}
 	else_if = {
 		limit = {
@@ -1843,7 +1842,7 @@ auto_upgrade_regimental_grounds_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = regimental_grounds_03
-		root = { remove_short_term_gold = 340 }
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
 	}
 	else_if = {
 		limit = {
@@ -1853,7 +1852,7 @@ auto_upgrade_regimental_grounds_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = regimental_grounds_02
-		root = { remove_short_term_gold = 250 }
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
 	}
 }
 
@@ -1867,7 +1866,7 @@ auto_upgrade_outposts_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = outposts_08
-		root = { remove_short_term_gold = 1145 }
+		hidden_effect = { root = { remove_short_term_gold = 1145 change_variable = { name = auto_upgrade_total_cost value = 1145 } } }
 	}
 	else_if = {
 		limit = {
@@ -1877,7 +1876,7 @@ auto_upgrade_outposts_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = outposts_07
-		root = { remove_short_term_gold = 825 }
+		hidden_effect = { root = { remove_short_term_gold = 825 change_variable = { name = auto_upgrade_total_cost value = 825 } } }
 	}
 	else_if = {
 		limit = {
@@ -1887,7 +1886,7 @@ auto_upgrade_outposts_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = outposts_06
-		root = { remove_short_term_gold = 580 }
+		hidden_effect = { root = { remove_short_term_gold = 580 change_variable = { name = auto_upgrade_total_cost value = 580 } } }
 	}
 	else_if = {
 		limit = {
@@ -1897,7 +1896,7 @@ auto_upgrade_outposts_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = outposts_05
-		root = { remove_short_term_gold = 400 }
+		hidden_effect = { root = { remove_short_term_gold = 400 change_variable = { name = auto_upgrade_total_cost value = 400 } } }
 	}
 	else_if = {
 		limit = {
@@ -1907,7 +1906,7 @@ auto_upgrade_outposts_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = outposts_04
-		root = { remove_short_term_gold = 275 }
+		hidden_effect = { root = { remove_short_term_gold = 275 change_variable = { name = auto_upgrade_total_cost value = 275 } } }
 	}
 	else_if = {
 		limit = {
@@ -1917,7 +1916,7 @@ auto_upgrade_outposts_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = outposts_03
-		root = { remove_short_term_gold = 195 }
+		hidden_effect = { root = { remove_short_term_gold = 195 change_variable = { name = auto_upgrade_total_cost value = 195 } } }
 	}
 	else_if = {
 		limit = {
@@ -1927,7 +1926,7 @@ auto_upgrade_outposts_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = outposts_02
-		root = { remove_short_term_gold = 150 }
+		hidden_effect = { root = { remove_short_term_gold = 150 change_variable = { name = auto_upgrade_total_cost value = 150 } } }
 	}
 }
 
@@ -1941,7 +1940,7 @@ auto_upgrade_horse_pastures_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = horse_pastures_08
-		root = { remove_short_term_gold = 2240 }
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
 	}
 	else_if = {
 		limit = {
@@ -1951,7 +1950,7 @@ auto_upgrade_horse_pastures_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = horse_pastures_07
-		root = { remove_short_term_gold = 1600 }
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
 	}
 	else_if = {
 		limit = {
@@ -1961,7 +1960,7 @@ auto_upgrade_horse_pastures_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = horse_pastures_06
-		root = { remove_short_term_gold = 1110 }
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
 	}
 	else_if = {
 		limit = {
@@ -1971,7 +1970,7 @@ auto_upgrade_horse_pastures_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = horse_pastures_05
-		root = { remove_short_term_gold = 750 }
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
 	}
 	else_if = {
 		limit = {
@@ -1981,7 +1980,7 @@ auto_upgrade_horse_pastures_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = horse_pastures_04
-		root = { remove_short_term_gold = 500 }
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
 	}
 	else_if = {
 		limit = {
@@ -1991,7 +1990,7 @@ auto_upgrade_horse_pastures_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = horse_pastures_03
-		root = { remove_short_term_gold = 340 }
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
 	}
 	else_if = {
 		limit = {
@@ -2001,7 +2000,7 @@ auto_upgrade_horse_pastures_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = horse_pastures_02
-		root = { remove_short_term_gold = 250 }
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
 	}
 }
 
@@ -2015,7 +2014,7 @@ auto_upgrade_camel_farms_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = camel_farms_08
-		root = { remove_short_term_gold = 2240 }
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
 	}
 	else_if = {
 		limit = {
@@ -2025,7 +2024,7 @@ auto_upgrade_camel_farms_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = camel_farms_07
-		root = { remove_short_term_gold = 1600 }
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
 	}
 	else_if = {
 		limit = {
@@ -2035,7 +2034,7 @@ auto_upgrade_camel_farms_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = camel_farms_06
-		root = { remove_short_term_gold = 1110 }
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
 	}
 	else_if = {
 		limit = {
@@ -2045,7 +2044,7 @@ auto_upgrade_camel_farms_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = camel_farms_05
-		root = { remove_short_term_gold = 750 }
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
 	}
 	else_if = {
 		limit = {
@@ -2055,7 +2054,7 @@ auto_upgrade_camel_farms_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = camel_farms_04
-		root = { remove_short_term_gold = 500 }
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
 	}
 	else_if = {
 		limit = {
@@ -2065,7 +2064,7 @@ auto_upgrade_camel_farms_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = camel_farms_03
-		root = { remove_short_term_gold = 340 }
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
 	}
 	else_if = {
 		limit = {
@@ -2075,7 +2074,7 @@ auto_upgrade_camel_farms_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = camel_farms_02
-		root = { remove_short_term_gold = 250 }
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
 	}
 }
 
@@ -2093,7 +2092,7 @@ auto_upgrade_ramparts_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = ramparts_08
-		root = { remove_short_term_gold = 1145 }
+		hidden_effect = { root = { remove_short_term_gold = 1145 change_variable = { name = auto_upgrade_total_cost value = 1145 } } }
 	}
 	else_if = {
 		limit = {
@@ -2103,7 +2102,7 @@ auto_upgrade_ramparts_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = ramparts_07
-		root = { remove_short_term_gold = 825 }
+		hidden_effect = { root = { remove_short_term_gold = 825 change_variable = { name = auto_upgrade_total_cost value = 825 } } }
 	}
 	else_if = {
 		limit = {
@@ -2113,7 +2112,7 @@ auto_upgrade_ramparts_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = ramparts_06
-		root = { remove_short_term_gold = 580 }
+		hidden_effect = { root = { remove_short_term_gold = 580 change_variable = { name = auto_upgrade_total_cost value = 580 } } }
 	}
 	else_if = {
 		limit = {
@@ -2123,7 +2122,7 @@ auto_upgrade_ramparts_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = ramparts_05
-		root = { remove_short_term_gold = 400 }
+		hidden_effect = { root = { remove_short_term_gold = 400 change_variable = { name = auto_upgrade_total_cost value = 400 } } }
 	}
 	else_if = {
 		limit = {
@@ -2133,7 +2132,7 @@ auto_upgrade_ramparts_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = ramparts_04
-		root = { remove_short_term_gold = 275 }
+		hidden_effect = { root = { remove_short_term_gold = 275 change_variable = { name = auto_upgrade_total_cost value = 275 } } }
 	}
 	else_if = {
 		limit = {
@@ -2143,7 +2142,7 @@ auto_upgrade_ramparts_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = ramparts_03
-		root = { remove_short_term_gold = 195 }
+		hidden_effect = { root = { remove_short_term_gold = 195 change_variable = { name = auto_upgrade_total_cost value = 195 } } }
 	}
 	else_if = {
 		limit = {
@@ -2153,7 +2152,7 @@ auto_upgrade_ramparts_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = ramparts_02
-		root = { remove_short_term_gold = 150 }
+		hidden_effect = { root = { remove_short_term_gold = 150 change_variable = { name = auto_upgrade_total_cost value = 150 } } }
 	}
 }
 
@@ -2167,7 +2166,7 @@ auto_upgrade_curtain_walls_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = curtain_walls_08
-		root = { remove_short_term_gold = 1145 }
+		hidden_effect = { root = { remove_short_term_gold = 1145 change_variable = { name = auto_upgrade_total_cost value = 1145 } } }
 	}
 	else_if = {
 		limit = {
@@ -2177,7 +2176,7 @@ auto_upgrade_curtain_walls_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = curtain_walls_07
-		root = { remove_short_term_gold = 825 }
+		hidden_effect = { root = { remove_short_term_gold = 825 change_variable = { name = auto_upgrade_total_cost value = 825 } } }
 	}
 	else_if = {
 		limit = {
@@ -2187,7 +2186,7 @@ auto_upgrade_curtain_walls_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = curtain_walls_06
-		root = { remove_short_term_gold = 580 }
+		hidden_effect = { root = { remove_short_term_gold = 580 change_variable = { name = auto_upgrade_total_cost value = 580 } } }
 	}
 	else_if = {
 		limit = {
@@ -2197,7 +2196,7 @@ auto_upgrade_curtain_walls_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = curtain_walls_05
-		root = { remove_short_term_gold = 400 }
+		hidden_effect = { root = { remove_short_term_gold = 400 change_variable = { name = auto_upgrade_total_cost value = 400 } } }
 	}
 	else_if = {
 		limit = {
@@ -2207,7 +2206,7 @@ auto_upgrade_curtain_walls_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = curtain_walls_04
-		root = { remove_short_term_gold = 275 }
+		hidden_effect = { root = { remove_short_term_gold = 275 change_variable = { name = auto_upgrade_total_cost value = 275 } } }
 	}
 	else_if = {
 		limit = {
@@ -2217,7 +2216,7 @@ auto_upgrade_curtain_walls_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = curtain_walls_03
-		root = { remove_short_term_gold = 195 }
+		hidden_effect = { root = { remove_short_term_gold = 195 change_variable = { name = auto_upgrade_total_cost value = 195 } } }
 	}
 	else_if = {
 		limit = {
@@ -2227,7 +2226,7 @@ auto_upgrade_curtain_walls_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = curtain_walls_02
-		root = { remove_short_term_gold = 150 }
+		hidden_effect = { root = { remove_short_term_gold = 150 change_variable = { name = auto_upgrade_total_cost value = 150 } } }
 	}
 }
 
@@ -2241,7 +2240,7 @@ auto_upgrade_watchtowers_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = watchtowers_08
-		root = { remove_short_term_gold = 1145 }
+		hidden_effect = { root = { remove_short_term_gold = 1145 change_variable = { name = auto_upgrade_total_cost value = 1145 } } }
 	}
 	else_if = {
 		limit = {
@@ -2251,7 +2250,7 @@ auto_upgrade_watchtowers_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = watchtowers_07
-		root = { remove_short_term_gold = 825 }
+		hidden_effect = { root = { remove_short_term_gold = 825 change_variable = { name = auto_upgrade_total_cost value = 825 } } }
 	}
 	else_if = {
 		limit = {
@@ -2261,7 +2260,7 @@ auto_upgrade_watchtowers_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = watchtowers_06
-		root = { remove_short_term_gold = 580 }
+		hidden_effect = { root = { remove_short_term_gold = 580 change_variable = { name = auto_upgrade_total_cost value = 580 } } }
 	}
 	else_if = {
 		limit = {
@@ -2271,7 +2270,7 @@ auto_upgrade_watchtowers_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = watchtowers_05
-		root = { remove_short_term_gold = 400 }
+		hidden_effect = { root = { remove_short_term_gold = 400 change_variable = { name = auto_upgrade_total_cost value = 400 } } }
 	}
 	else_if = {
 		limit = {
@@ -2281,7 +2280,7 @@ auto_upgrade_watchtowers_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = watchtowers_04
-		root = { remove_short_term_gold = 275 }
+		hidden_effect = { root = { remove_short_term_gold = 275 change_variable = { name = auto_upgrade_total_cost value = 275 } } }
 	}
 	else_if = {
 		limit = {
@@ -2291,7 +2290,7 @@ auto_upgrade_watchtowers_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = watchtowers_03
-		root = { remove_short_term_gold = 195 }
+		hidden_effect = { root = { remove_short_term_gold = 195 change_variable = { name = auto_upgrade_total_cost value = 195 } } }
 	}
 	else_if = {
 		limit = {
@@ -2301,7 +2300,7 @@ auto_upgrade_watchtowers_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = watchtowers_02
-		root = { remove_short_term_gold = 150 }
+		hidden_effect = { root = { remove_short_term_gold = 150 change_variable = { name = auto_upgrade_total_cost value = 150 } } }
 	}
 }
 
@@ -2315,7 +2314,7 @@ auto_upgrade_hill_forts_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = hill_forts_08
-		root = { remove_short_term_gold = 1145 }
+		hidden_effect = { root = { remove_short_term_gold = 1145 change_variable = { name = auto_upgrade_total_cost value = 1145 } } }
 	}
 	else_if = {
 		limit = {
@@ -2325,7 +2324,7 @@ auto_upgrade_hill_forts_effect = {
 			building_requirement_castle_city_church = { LEVEL = 04 }
 		}
 		add_building = hill_forts_07
-		root = { remove_short_term_gold = 825 }
+		hidden_effect = { root = { remove_short_term_gold = 825 change_variable = { name = auto_upgrade_total_cost value = 825 } } }
 	}
 	else_if = {
 		limit = {
@@ -2335,7 +2334,7 @@ auto_upgrade_hill_forts_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = hill_forts_06
-		root = { remove_short_term_gold = 580 }
+		hidden_effect = { root = { remove_short_term_gold = 580 change_variable = { name = auto_upgrade_total_cost value = 580 } } }
 	}
 	else_if = {
 		limit = {
@@ -2345,7 +2344,7 @@ auto_upgrade_hill_forts_effect = {
 			building_requirement_castle_city_church = { LEVEL = 03 }
 		}
 		add_building = hill_forts_05
-		root = { remove_short_term_gold = 400 }
+		hidden_effect = { root = { remove_short_term_gold = 400 change_variable = { name = auto_upgrade_total_cost value = 400 } } }
 	}
 	else_if = {
 		limit = {
@@ -2355,7 +2354,7 @@ auto_upgrade_hill_forts_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = hill_forts_04
-		root = { remove_short_term_gold = 275 }
+		hidden_effect = { root = { remove_short_term_gold = 275 change_variable = { name = auto_upgrade_total_cost value = 275 } } }
 	}
 	else_if = {
 		limit = {
@@ -2365,7 +2364,7 @@ auto_upgrade_hill_forts_effect = {
 			building_requirement_castle_city_church = { LEVEL = 02 }
 		}
 		add_building = hill_forts_03
-		root = { remove_short_term_gold = 195 }
+		hidden_effect = { root = { remove_short_term_gold = 195 change_variable = { name = auto_upgrade_total_cost value = 195 } } }
 	}
 	else_if = {
 		limit = {
@@ -2375,39 +2374,23 @@ auto_upgrade_hill_forts_effect = {
 			building_requirement_castle_city_church = { LEVEL = 01 }
 		}
 		add_building = hill_forts_02
-		root = { remove_short_term_gold = 150 }
+		hidden_effect = { root = { remove_short_term_gold = 150 change_variable = { name = auto_upgrade_total_cost value = 150 } } }
 	}
 }
 
 # ========================================
-# TRIBAL BUILDINGS
+# TRIBAL BUILDINGS (2 tiers each: _01 -> _02)
 # ========================================
 
 # Palisades
 auto_upgrade_palisades_effect = {
 	if = {
 		limit = {
-			has_building = palisades_03
-			root = { gold >= 150 }
-		}
-		add_building = palisades_04
-		root = { remove_short_term_gold = 150 }
-	}
-	else_if = {
-		limit = {
-			has_building = palisades_02
-			root = { gold >= 125 }
-		}
-		add_building = palisades_03
-		root = { remove_short_term_gold = 125 }
-	}
-	else_if = {
-		limit = {
 			has_building = palisades_01
 			root = { gold >= 100 }
 		}
 		add_building = palisades_02
-		root = { remove_short_term_gold = 100 }
+		hidden_effect = { root = { remove_short_term_gold = 100 change_variable = { name = auto_upgrade_total_cost value = 100 } } }
 	}
 }
 
@@ -2415,27 +2398,11 @@ auto_upgrade_palisades_effect = {
 auto_upgrade_war_camps_effect = {
 	if = {
 		limit = {
-			has_building = war_camps_03
-			root = { gold >= 150 }
-		}
-		add_building = war_camps_04
-		root = { remove_short_term_gold = 150 }
-	}
-	else_if = {
-		limit = {
-			has_building = war_camps_02
-			root = { gold >= 125 }
-		}
-		add_building = war_camps_03
-		root = { remove_short_term_gold = 125 }
-	}
-	else_if = {
-		limit = {
 			has_building = war_camps_01
 			root = { gold >= 100 }
 		}
 		add_building = war_camps_02
-		root = { remove_short_term_gold = 100 }
+		hidden_effect = { root = { remove_short_term_gold = 100 change_variable = { name = auto_upgrade_total_cost value = 100 } } }
 	}
 }
 
@@ -2443,111 +2410,11 @@ auto_upgrade_war_camps_effect = {
 auto_upgrade_longhouses_effect = {
 	if = {
 		limit = {
-			has_building = longhouses_03
-			root = { gold >= 150 }
-		}
-		add_building = longhouses_04
-		root = { remove_short_term_gold = 150 }
-	}
-	else_if = {
-		limit = {
-			has_building = longhouses_02
-			root = { gold >= 125 }
-		}
-		add_building = longhouses_03
-		root = { remove_short_term_gold = 125 }
-	}
-	else_if = {
-		limit = {
 			has_building = longhouses_01
 			root = { gold >= 100 }
 		}
 		add_building = longhouses_02
-		root = { remove_short_term_gold = 100 }
-	}
-}
-
-# Earthworks
-auto_upgrade_earthworks_effect = {
-	if = {
-		limit = {
-			has_building = earthworks_03
-			root = { gold >= 150 }
-		}
-		add_building = earthworks_04
-		root = { remove_short_term_gold = 150 }
-	}
-	else_if = {
-		limit = {
-			has_building = earthworks_02
-			root = { gold >= 125 }
-		}
-		add_building = earthworks_03
-		root = { remove_short_term_gold = 125 }
-	}
-	else_if = {
-		limit = {
-			has_building = earthworks_01
-			root = { gold >= 100 }
-		}
-		add_building = earthworks_02
-		root = { remove_short_term_gold = 100 }
-	}
-}
-
-# Hunting Grounds (Tribal)
-auto_upgrade_hunting_grounds_tribal_effect = {
-	if = {
-		limit = {
-			has_building = hunting_grounds_tribal_03
-			root = { gold >= 150 }
-		}
-		add_building = hunting_grounds_tribal_04
-		root = { remove_short_term_gold = 150 }
-	}
-	else_if = {
-		limit = {
-			has_building = hunting_grounds_tribal_02
-			root = { gold >= 125 }
-		}
-		add_building = hunting_grounds_tribal_03
-		root = { remove_short_term_gold = 125 }
-	}
-	else_if = {
-		limit = {
-			has_building = hunting_grounds_tribal_01
-			root = { gold >= 100 }
-		}
-		add_building = hunting_grounds_tribal_02
-		root = { remove_short_term_gold = 100 }
-	}
-}
-
-# Burial Grounds
-auto_upgrade_burial_grounds_effect = {
-	if = {
-		limit = {
-			has_building = burial_grounds_03
-			root = { gold >= 150 }
-		}
-		add_building = burial_grounds_04
-		root = { remove_short_term_gold = 150 }
-	}
-	else_if = {
-		limit = {
-			has_building = burial_grounds_02
-			root = { gold >= 125 }
-		}
-		add_building = burial_grounds_03
-		root = { remove_short_term_gold = 125 }
-	}
-	else_if = {
-		limit = {
-			has_building = burial_grounds_01
-			root = { gold >= 100 }
-		}
-		add_building = burial_grounds_02
-		root = { remove_short_term_gold = 100 }
+		hidden_effect = { root = { remove_short_term_gold = 100 change_variable = { name = auto_upgrade_total_cost value = 100 } } }
 	}
 }
 
@@ -2555,27 +2422,11 @@ auto_upgrade_burial_grounds_effect = {
 auto_upgrade_market_villages_effect = {
 	if = {
 		limit = {
-			has_building = market_villages_03
-			root = { gold >= 150 }
-		}
-		add_building = market_villages_04
-		root = { remove_short_term_gold = 150 }
-	}
-	else_if = {
-		limit = {
-			has_building = market_villages_02
-			root = { gold >= 125 }
-		}
-		add_building = market_villages_03
-		root = { remove_short_term_gold = 125 }
-	}
-	else_if = {
-		limit = {
 			has_building = market_villages_01
 			root = { gold >= 100 }
 		}
 		add_building = market_villages_02
-		root = { remove_short_term_gold = 100 }
+		hidden_effect = { root = { remove_short_term_gold = 100 change_variable = { name = auto_upgrade_total_cost value = 100 } } }
 	}
 }
 
@@ -2583,11 +2434,8 @@ auto_upgrade_market_villages_effect = {
 # MASTER EFFECTS
 # ========================================
 
-# Upgrades all buildings in a single province
 auto_upgrade_province_effect = {
-	# Province scope, ROOT = character
-
-	# --- Main Holdings (upgrade first to unlock higher tier buildings) ---
+	# --- Main Holdings ---
 	auto_upgrade_castle_effect = yes
 	auto_upgrade_city_effect = yes
 	auto_upgrade_temple_effect = yes
@@ -2597,9 +2445,6 @@ auto_upgrade_province_effect = {
 	auto_upgrade_palisades_effect = yes
 	auto_upgrade_war_camps_effect = yes
 	auto_upgrade_longhouses_effect = yes
-	auto_upgrade_earthworks_effect = yes
-	auto_upgrade_hunting_grounds_tribal_effect = yes
-	auto_upgrade_burial_grounds_effect = yes
 	auto_upgrade_market_villages_effect = yes
 
 	# --- Fortification Buildings ---
@@ -2637,11 +2482,13 @@ auto_upgrade_province_effect = {
 	auto_upgrade_outposts_effect = yes
 	auto_upgrade_horse_pastures_effect = yes
 	auto_upgrade_camel_farms_effect = yes
+
 }
 
-# Upgrades all buildings across all personally held counties
 auto_upgrade_all_effect = {
-	# Character scope
+	# Character scope - initialize cost tracker
+	set_variable = { name = auto_upgrade_total_cost value = 0 }
+
 	every_held_title = {
 		limit = { tier = tier_county }
 		every_county_province = {
@@ -2649,4 +2496,12 @@ auto_upgrade_all_effect = {
 			auto_upgrade_province_effect = yes
 		}
 	}
+
+	# Show total gold cost at the bottom (native "You lose" format)
+	if = {
+		limit = { var:auto_upgrade_total_cost > 0 }
+		hidden_effect = { add_gold = var:auto_upgrade_total_cost }
+		remove_short_term_gold = var:auto_upgrade_total_cost
+	}
+	hidden_effect = { remove_variable = auto_upgrade_total_cost }
 }
