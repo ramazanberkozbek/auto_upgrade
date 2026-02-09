@@ -6,22 +6,13 @@
 # MAIN HOLDINGS
 # ========================================
 
-# castle
+# castle (4 tiers: 01-04)
 auto_upgrade_castle_effect = {
 	if = {
 		limit = {
-			has_building = castle_04
-			root = { gold >= 1000 }
-			root.culture = { has_innovation = innovation_royal_armory }
-		}
-		add_building = castle_05
-		hidden_effect = { root = { remove_short_term_gold = 1000 change_variable = { name = auto_upgrade_total_cost value = 1000 } } }
-	}
-	else_if = {
-		limit = {
 			has_building = castle_03
 			root = { gold >= 850 }
-			root.culture = { has_innovation = innovation_royal_armory }
+			root.culture = { has_innovation = innovation_machicolations }
 		}
 		add_building = castle_04
 		hidden_effect = { root = { remove_short_term_gold = 850 change_variable = { name = auto_upgrade_total_cost value = 850 } } }
@@ -30,7 +21,7 @@ auto_upgrade_castle_effect = {
 		limit = {
 			has_building = castle_02
 			root = { gold >= 700 }
-			root.culture = { has_innovation = innovation_castle_baileys }
+			root.culture = { has_innovation = innovation_hoardings }
 		}
 		add_building = castle_03
 		hidden_effect = { root = { remove_short_term_gold = 700 change_variable = { name = auto_upgrade_total_cost value = 700 } } }
@@ -46,22 +37,13 @@ auto_upgrade_castle_effect = {
 	}
 }
 
-# city
+# city (4 tiers: 01-04)
 auto_upgrade_city_effect = {
 	if = {
 		limit = {
-			has_building = city_04
-			root = { gold >= 1000 }
-			root.culture = { has_innovation = innovation_royal_armory }
-		}
-		add_building = city_05
-		hidden_effect = { root = { remove_short_term_gold = 1000 change_variable = { name = auto_upgrade_total_cost value = 1000 } } }
-	}
-	else_if = {
-		limit = {
 			has_building = city_03
 			root = { gold >= 850 }
-			root.culture = { has_innovation = innovation_royal_armory }
+			root.culture = { has_innovation = innovation_cranes }
 		}
 		add_building = city_04
 		hidden_effect = { root = { remove_short_term_gold = 850 change_variable = { name = auto_upgrade_total_cost value = 850 } } }
@@ -70,7 +52,7 @@ auto_upgrade_city_effect = {
 		limit = {
 			has_building = city_02
 			root = { gold >= 700 }
-			root.culture = { has_innovation = innovation_castle_baileys }
+			root.culture = { has_innovation = innovation_windmills }
 		}
 		add_building = city_03
 		hidden_effect = { root = { remove_short_term_gold = 700 change_variable = { name = auto_upgrade_total_cost value = 700 } } }
@@ -79,29 +61,20 @@ auto_upgrade_city_effect = {
 		limit = {
 			has_building = city_01
 			root = { gold >= 550 }
-			root.culture = { has_innovation = innovation_burhs }
+			root.culture = { has_innovation = innovation_manorialism }
 		}
 		add_building = city_02
 		hidden_effect = { root = { remove_short_term_gold = 550 change_variable = { name = auto_upgrade_total_cost value = 550 } } }
 	}
 }
 
-# temple
+# temple (4 tiers: 01-04)
 auto_upgrade_temple_effect = {
 	if = {
 		limit = {
-			has_building = temple_04
-			root = { gold >= 1000 }
-			root.culture = { has_innovation = innovation_royal_armory }
-		}
-		add_building = temple_05
-		hidden_effect = { root = { remove_short_term_gold = 1000 change_variable = { name = auto_upgrade_total_cost value = 1000 } } }
-	}
-	else_if = {
-		limit = {
 			has_building = temple_03
 			root = { gold >= 850 }
-			root.culture = { has_innovation = innovation_royal_armory }
+			root.culture = { has_innovation = innovation_cranes }
 		}
 		add_building = temple_04
 		hidden_effect = { root = { remove_short_term_gold = 850 change_variable = { name = auto_upgrade_total_cost value = 850 } } }
@@ -110,7 +83,7 @@ auto_upgrade_temple_effect = {
 		limit = {
 			has_building = temple_02
 			root = { gold >= 700 }
-			root.culture = { has_innovation = innovation_castle_baileys }
+			root.culture = { has_innovation = innovation_windmills }
 		}
 		add_building = temple_03
 		hidden_effect = { root = { remove_short_term_gold = 700 change_variable = { name = auto_upgrade_total_cost value = 700 } } }
@@ -119,38 +92,23 @@ auto_upgrade_temple_effect = {
 		limit = {
 			has_building = temple_01
 			root = { gold >= 550 }
-			root.culture = { has_innovation = innovation_battlements }
+			root.culture = { has_innovation = innovation_manorialism }
 		}
 		add_building = temple_02
 		hidden_effect = { root = { remove_short_term_gold = 550 change_variable = { name = auto_upgrade_total_cost value = 550 } } }
 	}
 }
 
-# tribe
+# tribe (2 tiers: 01-02)
 auto_upgrade_tribe_effect = {
 	if = {
 		limit = {
-			has_building = tribe_03
-			root = { gold >= 150 }
-		}
-		add_building = tribe_04
-		hidden_effect = { root = { remove_short_term_gold = 150 change_variable = { name = auto_upgrade_total_cost value = 150 } } }
-	}
-	else_if = {
-		limit = {
-			has_building = tribe_02
-			root = { gold >= 125 }
-		}
-		add_building = tribe_03
-		hidden_effect = { root = { remove_short_term_gold = 125 change_variable = { name = auto_upgrade_total_cost value = 125 } } }
-	}
-	else_if = {
-		limit = {
 			has_building = tribe_01
-			root = { gold >= 100 }
+			root = { gold >= 200 }
+			root.culture = { has_innovation = innovation_plenary_assemblies }
 		}
 		add_building = tribe_02
-		hidden_effect = { root = { remove_short_term_gold = 100 change_variable = { name = auto_upgrade_total_cost value = 100 } } }
+		hidden_effect = { root = { remove_short_term_gold = 200 change_variable = { name = auto_upgrade_total_cost value = 200 } } }
 	}
 }
 
@@ -1486,80 +1444,6 @@ auto_upgrade_barracks_effect = {
 	}
 }
 
-# Militia Camps
-auto_upgrade_militia_camps_effect = {
-	if = {
-		limit = {
-			has_building = militia_camps_07
-			root = { gold >= 2240 }
-			root.culture = { has_innovation = innovation_royal_armory }
-			building_requirement_castle_city_church = { LEVEL = 04 }
-		}
-		add_building = militia_camps_08
-		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
-	}
-	else_if = {
-		limit = {
-			has_building = militia_camps_06
-			root = { gold >= 1600 }
-			root.culture = { has_innovation = innovation_royal_armory }
-			building_requirement_castle_city_church = { LEVEL = 04 }
-		}
-		add_building = militia_camps_07
-		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
-	}
-	else_if = {
-		limit = {
-			has_building = militia_camps_05
-			root = { gold >= 1110 }
-			root.culture = { has_innovation = innovation_royal_armory }
-			building_requirement_castle_city_church = { LEVEL = 03 }
-		}
-		add_building = militia_camps_06
-		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
-	}
-	else_if = {
-		limit = {
-			has_building = militia_camps_04
-			root = { gold >= 750 }
-			root.culture = { has_innovation = innovation_castle_baileys }
-			building_requirement_castle_city_church = { LEVEL = 03 }
-		}
-		add_building = militia_camps_05
-		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
-	}
-	else_if = {
-		limit = {
-			has_building = militia_camps_03
-			root = { gold >= 500 }
-			root.culture = { has_innovation = innovation_burhs }
-			building_requirement_castle_city_church = { LEVEL = 02 }
-		}
-		add_building = militia_camps_04
-		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
-	}
-	else_if = {
-		limit = {
-			has_building = militia_camps_02
-			root = { gold >= 340 }
-			root.culture = { has_innovation = innovation_burhs }
-			building_requirement_castle_city_church = { LEVEL = 02 }
-		}
-		add_building = militia_camps_03
-		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
-	}
-	else_if = {
-		limit = {
-			has_building = militia_camps_01
-			root = { gold >= 250 }
-			root.culture = { has_innovation = innovation_barracks }
-			building_requirement_castle_city_church = { LEVEL = 01 }
-		}
-		add_building = militia_camps_02
-		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
-	}
-}
-
 # Stables
 auto_upgrade_stables_effect = {
 	if = {
@@ -1634,77 +1518,25 @@ auto_upgrade_stables_effect = {
 	}
 }
 
-# Blacksmiths
+# Blacksmiths (3 tiers: 01-03, duchy capital building)
 auto_upgrade_blacksmiths_effect = {
 	if = {
 		limit = {
-			has_building = blacksmiths_07
-			root = { gold >= 2240 }
-			root.culture = { has_innovation = innovation_royal_armory }
-			building_requirement_castle_city_church = { LEVEL = 04 }
-		}
-		add_building = blacksmiths_08
-		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
-	}
-	else_if = {
-		limit = {
-			has_building = blacksmiths_06
-			root = { gold >= 1600 }
-			root.culture = { has_innovation = innovation_royal_armory }
-			building_requirement_castle_city_church = { LEVEL = 04 }
-		}
-		add_building = blacksmiths_07
-		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
-	}
-	else_if = {
-		limit = {
-			has_building = blacksmiths_05
-			root = { gold >= 1110 }
-			root.culture = { has_innovation = innovation_royal_armory }
-			building_requirement_castle_city_church = { LEVEL = 03 }
-		}
-		add_building = blacksmiths_06
-		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
-	}
-	else_if = {
-		limit = {
-			has_building = blacksmiths_04
-			root = { gold >= 750 }
-			root.culture = { has_innovation = innovation_castle_baileys }
-			building_requirement_castle_city_church = { LEVEL = 03 }
-		}
-		add_building = blacksmiths_05
-		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
-	}
-	else_if = {
-		limit = {
-			has_building = blacksmiths_03
-			root = { gold >= 500 }
-			root.culture = { has_innovation = innovation_burhs }
-			building_requirement_castle_city_church = { LEVEL = 02 }
-		}
-		add_building = blacksmiths_04
-		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
-	}
-	else_if = {
-		limit = {
 			has_building = blacksmiths_02
-			root = { gold >= 340 }
-			root.culture = { has_innovation = innovation_burhs }
-			building_requirement_castle_city_church = { LEVEL = 02 }
+			root = { gold >= 1100 }
+			root.culture = { has_innovation = innovation_royal_armory }
 		}
 		add_building = blacksmiths_03
-		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
+		hidden_effect = { root = { remove_short_term_gold = 1100 change_variable = { name = auto_upgrade_total_cost value = 1100 } } }
 	}
 	else_if = {
 		limit = {
 			has_building = blacksmiths_01
-			root = { gold >= 250 }
-			root.culture = { has_innovation = innovation_barracks }
-			building_requirement_castle_city_church = { LEVEL = 01 }
+			root = { gold >= 725 }
+			root.culture = { has_innovation = innovation_castle_baileys }
 		}
 		add_building = blacksmiths_02
-		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
+		hidden_effect = { root = { remove_short_term_gold = 725 change_variable = { name = auto_upgrade_total_cost value = 725 } } }
 	}
 }
 
@@ -2430,6 +2262,368 @@ auto_upgrade_market_villages_effect = {
 	}
 }
 
+# Murex Farm
+auto_upgrade_murex_farm_effect = {
+	if = {
+		limit = {
+			has_building = murex_farm_07
+			root = { gold >= 2240 }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = murex_farm_08
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = murex_farm_06
+			root = { gold >= 1600 }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = murex_farm_07
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = murex_farm_05
+			root = { gold >= 1110 }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = murex_farm_06
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = murex_farm_04
+			root = { gold >= 750 }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = murex_farm_05
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = murex_farm_03
+			root = { gold >= 500 }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = murex_farm_04
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = murex_farm_02
+			root = { gold >= 340 }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = murex_farm_03
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = murex_farm_01
+			root = { gold >= 250 }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = murex_farm_02
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
+	}
+}
+
+# Guild Halls
+auto_upgrade_guild_halls_effect = {
+	if = {
+		limit = {
+			has_building = guild_halls_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_cranes }
+			has_building_or_higher = city_04
+		}
+		add_building = guild_halls_08
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = guild_halls_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_cranes }
+			has_building_or_higher = city_04
+		}
+		add_building = guild_halls_07
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = guild_halls_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_guilds }
+			has_building_or_higher = city_03
+		}
+		add_building = guild_halls_06
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = guild_halls_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_guilds }
+			has_building_or_higher = city_03
+		}
+		add_building = guild_halls_05
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = guild_halls_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_manorialism }
+			has_building_or_higher = city_02
+		}
+		add_building = guild_halls_04
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = guild_halls_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_manorialism }
+			has_building_or_higher = city_02
+		}
+		add_building = guild_halls_03
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = guild_halls_01
+			root = { gold >= 250 }
+			root.culture = { has_innovation = innovation_crop_rotation }
+			has_building_or_higher = city_01
+		}
+		add_building = guild_halls_02
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
+	}
+}
+
+# Smiths
+auto_upgrade_smiths_effect = {
+	if = {
+		limit = {
+			has_building = smiths_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = smiths_08
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = smiths_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = smiths_07
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = smiths_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = smiths_06
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = smiths_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_castle_baileys }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = smiths_05
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = smiths_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_burhs }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = smiths_04
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = smiths_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_burhs }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = smiths_03
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = smiths_01
+			root = { gold >= 250 }
+			root.culture = { has_innovation = innovation_barracks }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = smiths_02
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
+	}
+}
+
+# Warrior Lodges
+auto_upgrade_warrior_lodges_effect = {
+	if = {
+		limit = {
+			has_building = warrior_lodges_07
+			root = { gold >= 1145 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = warrior_lodges_08
+		hidden_effect = { root = { remove_short_term_gold = 1145 change_variable = { name = auto_upgrade_total_cost value = 1145 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = warrior_lodges_06
+			root = { gold >= 825 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = warrior_lodges_07
+		hidden_effect = { root = { remove_short_term_gold = 825 change_variable = { name = auto_upgrade_total_cost value = 825 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = warrior_lodges_05
+			root = { gold >= 580 }
+			root.culture = { has_innovation = innovation_royal_armory }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = warrior_lodges_06
+		hidden_effect = { root = { remove_short_term_gold = 580 change_variable = { name = auto_upgrade_total_cost value = 580 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = warrior_lodges_04
+			root = { gold >= 400 }
+			root.culture = { has_innovation = innovation_castle_baileys }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = warrior_lodges_05
+		hidden_effect = { root = { remove_short_term_gold = 400 change_variable = { name = auto_upgrade_total_cost value = 400 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = warrior_lodges_03
+			root = { gold >= 275 }
+			root.culture = { has_innovation = innovation_burhs }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = warrior_lodges_04
+		hidden_effect = { root = { remove_short_term_gold = 275 change_variable = { name = auto_upgrade_total_cost value = 275 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = warrior_lodges_02
+			root = { gold >= 195 }
+			root.culture = { has_innovation = innovation_burhs }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = warrior_lodges_03
+		hidden_effect = { root = { remove_short_term_gold = 195 change_variable = { name = auto_upgrade_total_cost value = 195 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = warrior_lodges_01
+			root = { gold >= 150 }
+			root.culture = { has_innovation = innovation_barracks }
+		}
+		add_building = warrior_lodges_02
+		hidden_effect = { root = { remove_short_term_gold = 150 change_variable = { name = auto_upgrade_total_cost value = 150 } } }
+	}
+}
+
+# Hospices
+auto_upgrade_hospices_effect = {
+	if = {
+		limit = {
+			has_building = hospices_07
+			root = { gold >= 2240 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = hospices_08
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = hospices_06
+			root = { gold >= 1600 }
+			root.culture = { has_innovation = innovation_cranes }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = hospices_07
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = hospices_05
+			root = { gold >= 1110 }
+			root.culture = { has_innovation = innovation_windmills }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = hospices_06
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = hospices_04
+			root = { gold >= 750 }
+			root.culture = { has_innovation = innovation_windmills }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = hospices_05
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = hospices_03
+			root = { gold >= 500 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = hospices_04
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = hospices_02
+			root = { gold >= 340 }
+			root.culture = { has_innovation = innovation_manorialism }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = hospices_03
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = hospices_01
+			root = { gold >= 250 }
+			root.culture = { has_innovation = innovation_city_planning }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = hospices_02
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
+	}
+}
+
 # ========================================
 # MASTER EFFECTS
 # ========================================
@@ -2471,10 +2665,16 @@ auto_upgrade_province_effect = {
 	auto_upgrade_paddy_fields_effect = yes
 	auto_upgrade_elephant_pens_effect = yes
 	auto_upgrade_plantations_effect = yes
+	auto_upgrade_murex_farm_effect = yes
+
+	# --- Common Buildings ---
+	auto_upgrade_hospices_effect = yes
+
+	# --- City Buildings ---
+	auto_upgrade_guild_halls_effect = yes
 
 	# --- Military Buildings ---
 	auto_upgrade_barracks_effect = yes
-	auto_upgrade_militia_camps_effect = yes
 	auto_upgrade_stables_effect = yes
 	auto_upgrade_blacksmiths_effect = yes
 	auto_upgrade_workshops_effect = yes
@@ -2482,6 +2682,8 @@ auto_upgrade_province_effect = {
 	auto_upgrade_outposts_effect = yes
 	auto_upgrade_horse_pastures_effect = yes
 	auto_upgrade_camel_farms_effect = yes
+	auto_upgrade_smiths_effect = yes
+	auto_upgrade_warrior_lodges_effect = yes
 
 }
 
