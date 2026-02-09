@@ -1,3 +1,5 @@
 ﻿l_english:
  auto_upgrade_buildings_decision:0 "Upgrade All Buildings"
  auto_upgrade_buildings_decision_desc:0 "Instantly upgrade all existing buildings in your personally held counties. Checks technology requirements and deducts gold for each upgrade. Only upgrades existing buildings - does not construct new ones.\n\n#weak The preview may show more upgrades than you can actually afford. Gold is spent sequentially, so only as many upgrades as your gold allows will be applied.#!"
+ auto_upgrade_buildings_decision_tooltip:0 "Upgrades all existing buildings in your counties that meet technology and gold requirements."
+ auto_upgrade_buildings_decision_confirm:0 "Upgrade All Buildings"

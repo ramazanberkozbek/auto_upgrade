@@ -2624,6 +2624,140 @@ auto_upgrade_hospices_effect = {
 	}
 }
 
+# Waterworks (8 tiers, normal cost, no innovation)
+auto_upgrade_waterworks_effect = {
+	if = {
+		limit = {
+			has_building = waterworks_07
+			root = { gold >= 2240 }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = waterworks_08
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = waterworks_06
+			root = { gold >= 1600 }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = waterworks_07
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = waterworks_05
+			root = { gold >= 1110 }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = waterworks_06
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = waterworks_04
+			root = { gold >= 750 }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = waterworks_05
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = waterworks_03
+			root = { gold >= 500 }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = waterworks_04
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = waterworks_02
+			root = { gold >= 340 }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = waterworks_03
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = waterworks_01
+			root = { gold >= 250 }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = waterworks_02
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
+	}
+}
+
+# Powder Magazine (8 tiers, normal cost, no innovation)
+auto_upgrade_powder_magazine_effect = {
+	if = {
+		limit = {
+			has_building = powder_magazine_07
+			root = { gold >= 2240 }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = powder_magazine_08
+		hidden_effect = { root = { remove_short_term_gold = 2240 change_variable = { name = auto_upgrade_total_cost value = 2240 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = powder_magazine_06
+			root = { gold >= 1600 }
+			building_requirement_castle_city_church = { LEVEL = 04 }
+		}
+		add_building = powder_magazine_07
+		hidden_effect = { root = { remove_short_term_gold = 1600 change_variable = { name = auto_upgrade_total_cost value = 1600 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = powder_magazine_05
+			root = { gold >= 1110 }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = powder_magazine_06
+		hidden_effect = { root = { remove_short_term_gold = 1110 change_variable = { name = auto_upgrade_total_cost value = 1110 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = powder_magazine_04
+			root = { gold >= 750 }
+			building_requirement_castle_city_church = { LEVEL = 03 }
+		}
+		add_building = powder_magazine_05
+		hidden_effect = { root = { remove_short_term_gold = 750 change_variable = { name = auto_upgrade_total_cost value = 750 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = powder_magazine_03
+			root = { gold >= 500 }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = powder_magazine_04
+		hidden_effect = { root = { remove_short_term_gold = 500 change_variable = { name = auto_upgrade_total_cost value = 500 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = powder_magazine_02
+			root = { gold >= 340 }
+			building_requirement_castle_city_church = { LEVEL = 02 }
+		}
+		add_building = powder_magazine_03
+		hidden_effect = { root = { remove_short_term_gold = 340 change_variable = { name = auto_upgrade_total_cost value = 340 } } }
+	}
+	else_if = {
+		limit = {
+			has_building = powder_magazine_01
+			root = { gold >= 250 }
+			building_requirement_castle_city_church = { LEVEL = 01 }
+		}
+		add_building = powder_magazine_02
+		hidden_effect = { root = { remove_short_term_gold = 250 change_variable = { name = auto_upgrade_total_cost value = 250 } } }
+	}
+}
+
 # ========================================
 # MASTER EFFECTS
 # ========================================
@@ -2666,6 +2800,7 @@ auto_upgrade_province_effect = {
 	auto_upgrade_elephant_pens_effect = yes
 	auto_upgrade_plantations_effect = yes
 	auto_upgrade_murex_farm_effect = yes
+	auto_upgrade_waterworks_effect = yes
 
 	# --- Common Buildings ---
 	auto_upgrade_hospices_effect = yes
@@ -2684,6 +2819,7 @@ auto_upgrade_province_effect = {
 	auto_upgrade_camel_farms_effect = yes
 	auto_upgrade_smiths_effect = yes
 	auto_upgrade_warrior_lodges_effect = yes
+	auto_upgrade_powder_magazine_effect = yes
 
 }
 
